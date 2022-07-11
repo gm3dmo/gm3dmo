@@ -7,6 +7,6 @@
 
 #### Skills
 <img src="https://github.com/devicons/devicon/blob/master/icons/python/python-original-wordmark.svg" title="Python" alt="Python" width="40" height="40"/>&nbsp;
+<img src="https://github.com/devicons/devicon/blob/master/icons/linux/linux-original-wordmark.svg" title="Linux" alt="Linux" width="40" height="40"/>&nbsp;
 
 
-https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black
