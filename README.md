@@ -1,10 +1,10 @@
 ### Hi there 👋
 
-**gm3dmo/gm3dmo** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
-
-- 🔭 I’m currently working on parsing log files and converting them to CSV [](http://github.com/gm3dmo/syslog-to-csv)
+- 🔭 I’m currently working on parsing log files and converting them to CSV with [syslog-to-csv](http://github.com/gm3dmo/syslog-to-csv)
 - 🌱 I’m currently learning [Pandas](https://pandas.pydata.org/)
-- 💬 Ask me about problem solving, reproducing errors, GitHub API's
+- 💬 Ask me about problem solving, reproducing errors, GitHub API's.
 - 📫 How to reach me: [![Linkedin Badge](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)
 
-
+#### Skills
+https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white
+https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black
