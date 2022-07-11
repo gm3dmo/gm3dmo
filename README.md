@@ -6,5 +6,7 @@
 - 📫 How to reach me: [![Linkedin Badge](https://img.shields.io/badge/-davidmorris-blue?style=flat&logo=Linkedin&logoColor=white)](https://www.linkedin.com/in/david-morris-3049a5b/)
 
 #### Skills
-[](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
+<img src="https://github.com/devicons/devicon/blob/master/icons/python/python-original-wordmark.svg" title="Python" alt="Python" width="40" height="40"/>&nbsp;
+
+
 https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black
