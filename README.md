@@ -1,7 +1,7 @@
 ### Hi there 👋
 
 - 🧹 Work in the support team at GitHub.com
-- 🔭 Working on parsing log files and converting them to CSV with [syslog-to-csv](http://github.com/gm3dmo/syslog-to-csv).
+- 🔭 Interested in parsing log files and converting them to CSV with [syslog-to-csv](http://github.com/gm3dmo/syslog-to-csv).
 - 🌱 I’m currently learning [Pandas](https://pandas.pydata.org/).
 - 💬 Ask me about problem solving, reproducing errors, GitHub API's.
 - 📫 How to reach me: [![Linkedin Badge](https://img.shields.io/badge/-davidmorris-blue?style=flat&logo=Linkedin&logoColor=white)](https://www.linkedin.com/in/david-morris-3049a5b/)
