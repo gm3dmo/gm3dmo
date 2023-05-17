@@ -2,7 +2,7 @@
 These are what I've found works best for me when going to certification type exams.
 
 ## Location
-Book the exam to take place at the certification centre and not in my home. This leaves me completely free from distractions which may happen at home like dogs barking, parcels arrifving, children/family.
+Book the exam to take place at the certification centre and not in my home. This leaves me completely free from distractions which may happen at home like smelly dogs barking, parcels arriving, children/family.
 
 ## Clothing
 Wear a t shirt or pulloever. They will ask you to roll down your sleeves if you wear a shirt with them rolled up.
