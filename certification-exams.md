@@ -6,6 +6,8 @@ Book the exam to take place at the certification centre and not in my home. This
 
 ![a smelly dog named rosie](assets/smelly-dog.png)
 
+When I've been to my local testing centre then I'm able to say how long it takes to get there. No stress about getting lost and so on.
+
 ## Timing
 I feel like I'm a "morning person" so I book my exam for the morning session when my concentration is at it's very best.
 
