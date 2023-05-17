@@ -8,7 +8,12 @@ Book the exam to take place at the certification centre and not in my home. This
 Wear a t shirt or pulloever. They will ask you to roll down your sleeves if you wear a shirt with them rolled up.
 
 ## Food
-I eat before my exam. I like to have a tuna sandwich and a banana about 30 minutes prior to the start of the exam. Bananas and tuna are supposed to be good "brain foods". I like to imagine this gives me maximum advantage.
+I eat before my exam. I like to have a tuna sandwich and a banana about 30 minutes prior to the start of the exam. 
+
+![a tuna sandwich and a banana](assets/tuna-sandwich-banana.png)
+
+
+Bananas and tuna are supposed to be good "brain foods". I like to imagine this gives me maximum advantage.
 
 ## Exam Strategy
 I like to race through and answer everything I know I know the answer to as fast as I can leaving blank the ones I don't know. As I see it this has the following advantages;
