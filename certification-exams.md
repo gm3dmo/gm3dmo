@@ -5,15 +5,14 @@ These are what I've found works best for me when going to certification type exa
 Book the exam to take place at the certification centre and not in my home. This leaves me completely free from distractions which may happen at home like smelly dogs barking, parcels arriving, children/family.
 
 ## Clothing
-Wear a t shirt or pulloever. They will ask you to roll down your sleeves if you wear a shirt with them rolled up.
+Wear a t-shirt or pullover. The invigilators will ask you to roll down your sleeves if you wear a shirt with them rolled up. Apparently people like to cheat.
 
 ## Food
 I eat before my exam. I like to have a tuna sandwich and a banana about 30 minutes prior to the start of the exam. 
 
 ![a tuna sandwich and a banana](assets/tuna-sandwich-banana.png)
 
-
-Bananas and tuna are supposed to be good "brain foods". I like to imagine this gives me maximum advantage.
+Bananas and tuna are supposed to be good "brain foods". As a bear of little brain I like to imagine that eating this gives me maximum advantage.
 
 ## Exam Strategy
 I like to race through and answer everything I know I know the answer to as fast as I can leaving blank the ones I don't know. As I see it this has the following advantages;
