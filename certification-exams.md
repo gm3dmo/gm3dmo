@@ -6,6 +6,8 @@ Book the exam to take place at the certification centre and not in my home. This
 
 ![a smelly dog named rosie](assets/smelly-dog.png)
 
+## Timing
+I feel like I'm a "morning person" so I book my exam for the morning session when my concentration is at it's very best.
 
 ## Clothing
 Wear a t-shirt or pullover. The invigilators will ask you to roll down your sleeves if you wear a shirt with them rolled up. Apparently people like to cheat.
