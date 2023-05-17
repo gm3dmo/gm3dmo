@@ -2,7 +2,7 @@
 These are what I've found works best for me when going to certification type exams.
 
 ## Location
-Book the exam to take place at the certification centre and not in my home. This leaves me completely free from distractions which may happen at home such as parcels arriving, children/family and smelly dogs that bark.
+Book the exam to take place at the certification centre and not in my home. This leaves me completely free from distractions which may happen at home such as parcels arriving, children/family and smelly dogs that hae learned to show off during zoom calls barking an generally misbehaving.
 
 ![a smelly dog named rosie](assets/smelly-dog.png)
 
