@@ -5,6 +5,8 @@ These are what I've found works best for me when going to certification type exa
 My preference is to take the exam at a local testing centre. Whilst this does involve about an hour of travel in each direction, it leaves me completely free from distractions which may happen at home such as delivery drivers knocking at the door with parcels, dealing with venomous insects/reptiles, giving attention to children/family and smelly dogs that have learned to show off during zoom calls by barking being unruly and generally misbehaving.
 
 ![a smelly dog named rosie](assets/smelly-dog.png)
+<img src="assets/smelly-dog.png" width="320" height="240">
+
 
 ## Timing
 I feel like I'm a "morning person" so I book my exam for the morning session when my concentration is at it's very best.
