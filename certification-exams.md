@@ -18,7 +18,7 @@ Eat a nutritious slack before my exam. I like to have a tuna sandwich and a bana
 <img src="assets/tuna-sandwich-banana.png" width="320" height="240">
 
 
-Bananas and tuna are supposed to be good "brain foods". As a [bear of little brain](https://www.goodreads.com/quotes/142015-when-you-are-a-bear-of-very-little-brain-and) I like to imagine that eating this gives me maximum advantage.
+Bananas and tuna are supposed to be good "brain foods". As a [bear of little brain](https://www.goodreads.com/quotes/142015-when-you-are-a-bear-of-very-little-brain-and), I like to imagine that eating this gives me maximum advantage.
 
 ## Exam Strategy
 Race through and answer everything I know that I know the answer to as fast as I can, leaving blank the ones I don't know. As I see it this has the following advantages;
