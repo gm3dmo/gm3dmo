@@ -7,7 +7,7 @@ My preference is to take the exam at a local testing centre. Whilst this does in
 <img src="assets/smelly-dog.png" width="320" height="240">
 
 ## Timing
-I feel like I'm a "morning person" so I book my exam for the morning session when my concentration is at it's very best.
+I feel like I'm a "morning person" so I book my exam for the morning session around 09:30 when my concentration is at it's very best.
 
 ## Clothing
 Wear a t-shirt or pullover not a shirt with rolled up sleeves. The invigilators have asked me to roll down my sleeves. If you wear a shirt, don't roll up the sleeves. Apparently people like to cheat.
