@@ -2,27 +2,25 @@
 These are what I've found works best for me when going to certification type exams.
 
 ## Location
-Book the exam to take place at the certification centre and not in my home. This leaves me completely free from distractions which may happen at home such as parcels arriving, children/family and smelly dogs that have learned to show off during zoom calls by barking being unruly and generally misbehaving.
+My preference is to take the exam at a local testing centre. Whilst this does involve about an hour of travel in each direction, it leaves me completely free from distractions which may happen at home such as delivery drivers knocking at the door with parcels, dealing with venomous insects/reptiles, giving attention to children/family and smelly dogs that have learned to show off during zoom calls by barking being unruly and generally misbehaving.
 
 ![a smelly dog named rosie](assets/smelly-dog.png)
-
-When I've been to my local testing centre then I'm able to say how long it takes to get there. No stress about getting lost and so on.
 
 ## Timing
 I feel like I'm a "morning person" so I book my exam for the morning session when my concentration is at it's very best.
 
 ## Clothing
-Wear a t-shirt or pullover. The invigilators will ask you to roll down your sleeves if you wear a shirt with them rolled up. Apparently people like to cheat.
+Wear a t-shirt or pullover not a shirt with rolled up sleeves. The invigilators have asked me to roll down my sleeves. If you wear a shirt, don't roll up the sleeves. Apparently people like to cheat.
 
 ## Food
-I eat before my exam. I like to have a tuna sandwich and a banana about 30 minutes prior to the start of the exam. 
+Eat a nutritious slack before my exam. I like to have a tuna sandwich and a banana about 30 minutes prior to the start of the exam. 
 
 ![a tuna sandwich and a banana](assets/tuna-sandwich-banana.png)
 
-Bananas and tuna are supposed to be good "brain foods". As a bear of little brain I like to imagine that eating this gives me maximum advantage.
+Bananas and tuna are supposed to be good "brain foods". As a [bear of little brain](https://www.goodreads.com/quotes/142015-when-you-are-a-bear-of-very-little-brain-and) I like to imagine that eating this gives me maximum advantage.
 
 ## Exam Strategy
-I like to race through and answer everything I know I know the answer to as fast as I can leaving blank the ones I don't know. As I see it this has the following advantages;
+Race through and answer everything I know that I know the answer to as fast as I can, leaving blank the ones I don't know. As I see it this has the following advantages;
 
 - See every question. Sometimes a later question will help you to work out the answer to an earlier question.
 - Builds confidence.
