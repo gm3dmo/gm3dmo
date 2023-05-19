@@ -31,9 +31,9 @@ Dealing with questions where I've no clue is harder. I try to eliminate the impo
 
 Which animal has 4 legs and barks:
 
-A. Cow
-B. Duck
-C. Dog
-D. Wolf
+- A. Cow
+- B. Duck
+- C. Dog
+- D. Wolf
 
 Then I know I can get rid of both cow and duck. If I still don't know the answer then it's a 50 percent chance in the guess not a 25 percent chance.
