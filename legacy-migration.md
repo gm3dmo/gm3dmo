@@ -7,7 +7,7 @@
 - Identify when the best times are to run jobs like data extracts.
 - SSL/TLS. Older apps can't do modern versions of TLS. Bear that in mind when you need to connect to them via the network you may need some older ISO's to boot up and connect.
 
-- <script src="https://gist.github.com/gm3dmo/769aba08842c10b44ce535d53c44714a.js"></script>
+- [Migrating a Java app from the Stone Age](https://gist.github.com/gm3dmo/769aba08842c10b44ce535d53c44714a)
 
 #### Databases
 
