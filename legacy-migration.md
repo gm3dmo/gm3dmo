@@ -7,6 +7,8 @@
 - Identify when the best times are to run jobs like data extracts.
 - SSL/TLS. Older apps can't do modern versions of TLS. Bear that in mind when you need to connect to them via the network you may need some older ISO's to boot up and connect.
 
+- [Migrating a Java App from the stone age](<script src="https://gist.github.com/gm3dmo/769aba08842c10b44ce535d53c44714a.js"></script>)
+
 #### Databases
 
 ##### Microsoft Access
@@ -37,4 +39,4 @@ The `csv` module didn't get `DictWriter` until 2.6 so we can't use that:
 
 
 #### Operating systems
-`readdir` on solaris sorts it's responses and `readdir` on Linux does not.
+Linux is a Unix clone but that does not mean it's an exact copy for example `readdir` on Solaris sorts it's responses and `readdir` on Linux does not.
