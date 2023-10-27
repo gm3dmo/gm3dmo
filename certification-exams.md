@@ -2,7 +2,7 @@
 These are what I've found works best for me when going to certification type exams.
 
 ## Location
-My preference is to take the exam at a local testing centre. Whilst this does involve about an hour of travel in each direction, it leaves me completely free from distractions which may happen at home such as delivery drivers knocking at the door with parcels, dealing with venomous insects/reptiles, giving attention to children/family and smelly dogs that have learned to show off during zoom calls by barking being unruly and generally misbehaving.
+My preference is to take the exam at a local testing centre. Whilst this does involve about an hour of travel in each direction, it leaves me completely free from distractions which may happen at home such as delivery drivers knocking at the door with parcels, dealing with venomous insects/reptiles, giving attention to children/family and smelly dogs that have learned to show off during zoom calls by barking, being unruly and generally misbehaving on every level during the exam.
 
 <img src="assets/smelly-dog.png" width="320" height="240">
 
