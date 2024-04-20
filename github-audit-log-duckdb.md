@@ -189,3 +189,15 @@ duckdb github-enterprise-audit.db
 CREATE TABLE events AS SELECT * FROM read_json_auto('events.json',  ignore_errors=true);
 ```
 
+#### Extract actions per minute
+
+```sql
+SELECT
+ action,
+  DATE_TRUNC('minute', to_timestamp("@timestamp"/1000)) AS minute,
+  COUNT(*) AS count
+FROM gitevents
+GROUP BY DATE_TRUNC('minute', to_timestamp("@timestamp"/1000)), action
+ORDER BY minute;
+```
+
