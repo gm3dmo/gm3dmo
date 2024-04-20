@@ -1,5 +1,15 @@
 # Making sense of the GitHub Audit log exports with DuckDB
-Having [exported git events](https://docs.github.com/en/enterprise-cloud@latest/admin/monitoring-activity-in-your-enterprise/reviewing-audit-logs-for-your-enterprise/exporting-audit-log-activity-for-your-enterprise#exporting-git-events-data) from my organization I wanted to be able to do some quick reports. 
+Having [exported git events](https://docs.github.com/en/enterprise-cloud@latest/admin/monitoring-activity-in-your-enterprise/reviewing-audit-logs-for-your-enterprise/exporting-audit-log-activity-for-your-enterprise#exporting-git-events-data) from my organization and stored them in a file named `audit.json` I found that json is not the most pleasant thing to read:
+
+```json
+{"@timestamp":1713596671828,"_document_id":"URqi_-__Xjl1qZojMcYnqA==","action":"git.fetch","actor":"datadog-forest-town[bot]","actor_id":111058333,"actor_ip":"44.192.28.48","actor_location":{"country_code":"US"},"business":"gm3dmo-enterprise-cloud-testing","business_id":3082,"external_id":"","hashed_token":"j7TxdJbRhfNhkIOs67EXYceuX0EXL+du673X+6QYSow=","org":"forest-town","org_id":86825428,"programmatic_access_type":"GitHub App server-to-server token","repo":"forest-town/repo-2079435","repository":"forest-town/repo-2079435","repository_public":false,"token_id":0,"transport_protocol":1,"transport_protocol_name":"http","user":"","user_agent":"go-git/5.x","user_id":0}
+{"@timestamp":1713596669109,"_document_id":"UcKnmGTmhciMVlkYOGkUaQ==","action":"git.push","actor":"github-actions[bot]","actor_id":41898282,"actor_ip":"20.57.77.4","actor_location":{"country_code":"US"},"business":"gm3dmo-enterprise-cloud-testing","business_id":3082,"external_id":"","hashed_token":"EJmtcbNI26UXIHgh0fnmlmRsDcqsW6y9zLP4xwk9S+s=","org":"forest-town","org_id":86825428,"programmatic_access_type":"GitHub App server-to-server token","repo":"forest-town/repo-2079435","repository":"forest-town/repo-2079435","repository_public":false,"token_id":0,"transport_protocol":1,"transport_protocol_name":"http","user":"","user_agent":"git/2.43.2","user_id":0}
+```
+
+I wanted to be able to do two things quickly:
+
+1. Run SQL type commands to create a report.
+2. Provide a CSV file to a data analyst.
 
 ### Install duckdb
 
