@@ -1,6 +1,6 @@
 # Extracting information from the GitHub Audit log exports with DuckDB
 
-Having [exported git events](https://docs.github.com/en/enterprise-cloud@latest/admin/monitoring-activity-in-your-enterprise/reviewing-audit-logs-for-your-enterprise/exporting-audit-log-activity-for-your-enterprise#exporting-git-events-data) from my organization and stored them in a file named `audit-git.json` I found that json is not the most pleasant thing to read:
+Having [exported git events](https://docs.github.com/en/enterprise-cloud@latest/admin/monitoring-activity-in-your-enterprise/reviewing-audit-logs-for-your-enterprise/exporting-audit-log-activity-for-your-enterprise#exporting-git-events-data) from my organization and stored them in a file named `git-events.json` I found that json is not the most pleasant thing to read:
 
 ```json
 {"@timestamp":1713596671828,"_document_id":"URqi_-__Xjl1qZojMcYnqA==","action":"git.fetch","actor":"datadog-forest-town[bot]","actor_id":111058333,"actor_ip":"44.192.28.48","actor_location":{"country_code":"US"},"business":"gm3dmo-enterprise-cloud-testing","business_id":3082,"external_id":"","hashed_token":"j7TxdJbRhfNhkIOs67EXYceuX0EXL+du673X+6QYSow=","org":"forest-town","org_id":86825428,"programmatic_access_type":"GitHub App server-to-server token","repo":"forest-town/repo-2079435","repository":"forest-town/repo-2079435","repository_public":false,"token_id":0,"transport_protocol":1,"transport_protocol_name":"http","user":"","user_agent":"go-git/5.x","user_id":0}
@@ -123,11 +123,11 @@ D select * from './audit.json' where action = 'git.push';
 duckdb github-enterprise-audit.db
 ```
 
-#### Import the `audit-git.json` file into a table called "audit_git"
-This will create a table in the database containing all the data from audit-git.json.
+#### Import the `git-events.json` file into a table called "gitevents"
+This will create a table in the database containing all the data from git-events.json.
 
 ```sql
-CREATE TABLE audit AS SELECT * FROM read_json_auto('audit-git.json');
+CREATE TABLE gitevents AS SELECT * FROM read_json_auto('git-events.json');
 ```
 
 #### Select action and group by minute
@@ -137,7 +137,7 @@ SELECT
  action,
   DATE_TRUNC('minute', to_timestamp("@timestamp"/1000)) AS minute,
   COUNT(*) AS count
-FROM audit
+FROM gitevents
 GROUP BY DATE_TRUNC('minute', to_timestamp("@timestamp"/1000)), action
 ORDER BY minute;
 ```
