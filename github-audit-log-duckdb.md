@@ -114,3 +114,5 @@ FROM events
 GROUP BY DATE_TRUNC('hour', to_timestamp("@timestamp"/1000)), action
 ORDER BY hour) TO 'events-by-hour.csv' (HEADER, DELIMITER ',');
 ```
+
+A file called `events-by-hour.csv` has been created.
