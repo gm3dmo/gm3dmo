@@ -196,7 +196,7 @@ SELECT
  action,
   DATE_TRUNC('minute', to_timestamp("@timestamp"/1000)) AS minute,
   COUNT(*) AS count
-FROM gitevents
+FROM events
 GROUP BY DATE_TRUNC('minute', to_timestamp("@timestamp"/1000)), action
 ORDER BY minute;
 ```
