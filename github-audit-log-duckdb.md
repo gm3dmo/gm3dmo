@@ -223,7 +223,6 @@ SELECT
   DATE_TRUNC('minute', to_timestamp("@timestamp"/1000)) AS minute,
   action,
   COUNT(*) AS count
-
 FROM events
 GROUP BY DATE_TRUNC('minute', to_timestamp("@timestamp"/1000)), action
 ORDER BY minute) TO 'events-by-minute.csv' (HEADER, DELIMITER ',');
