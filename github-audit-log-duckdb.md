@@ -186,6 +186,6 @@ duckdb github-enterprise-audit.db
 ```
 
 ```sql
-CREATE TABLE events AS SELECT * FROM read_json_auto('events.json',  ON_ERROR='ignore');
+CREATE TABLE events AS SELECT * FROM read_json_auto('events.json',  ignore_errors=true);
 ```
 
