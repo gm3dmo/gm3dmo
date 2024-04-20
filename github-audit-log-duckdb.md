@@ -201,3 +201,16 @@ GROUP BY DATE_TRUNC('minute', to_timestamp("@timestamp"/1000)), action
 ORDER BY minute;
 ```
 
+#### Create a csv report
+
+```sql
+.mode csv
+.headers on
+SELECT
+ action,
+  DATE_TRUNC('minute', to_timestamp("@timestamp"/1000)) AS minute,
+  COUNT(*) AS count
+FROM events
+GROUP BY DATE_TRUNC('minute', to_timestamp("@timestamp"/1000)), action
+ORDER BY minute;
+```
