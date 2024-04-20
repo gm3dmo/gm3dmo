@@ -42,49 +42,20 @@ This will create a table in the database containing all the data from git-events
 CREATE TABLE gitevents AS SELECT * FROM read_json_auto('git-events.json');
 ```
 
-#### Select action and group by minute
+#### Select action and group by hour
 
 ```sql
 SELECT
  action,
-  DATE_TRUNC('minute', to_timestamp("@timestamp"/1000)) AS minute,
+  DATE_TRUNC('hour', to_timestamp("@timestamp"/1000)) AS hour,
   COUNT(*) AS count
 FROM gitevents
-GROUP BY DATE_TRUNC('minute', to_timestamp("@timestamp"/1000)), action
-ORDER BY minute;
+GROUP BY DATE_TRUNC('hour', to_timestamp("@timestamp"/1000)), action
+ORDER BY hour;
 ```
 
 ```
-┌───────────┬──────────────────────────┬───────┐
-│  action   │          minute          │ count │
-│  varchar  │ timestamp with time zone │ int64 │
-├───────────┼──────────────────────────┼───────┤
-│ git.fetch │ 2024-04-19 11:43:00+01   │     1 │
-│ git.clone │ 2024-04-19 11:43:00+01   │     1 │
-│ git.fetch │ 2024-04-19 11:44:00+01   │     6 │
-│ git.clone │ 2024-04-19 11:44:00+01   │     1 │
-│ git.fetch │ 2024-04-19 11:45:00+01   │     1 │
-│ git.clone │ 2024-04-19 11:45:00+01   │     1 │
-│ git.fetch │ 2024-04-19 14:48:00+01   │     4 │
-│ git.clone │ 2024-04-19 14:48:00+01   │     2 │
-│ git.push  │ 2024-04-19 14:49:00+01   │     2 │
-│ git.clone │ 2024-04-19 14:49:00+01   │     1 │
-│ git.fetch │ 2024-04-19 15:12:00+01   │     3 │
-│ git.clone │ 2024-04-19 15:12:00+01   │     1 │
-│ git.fetch │ 2024-04-19 15:13:00+01   │     2 │
-│ git.clone │ 2024-04-19 15:13:00+01   │     1 │
-│ git.fetch │ 2024-04-20 07:41:00+01   │     1 │
-│ git.clone │ 2024-04-20 07:41:00+01   │     3 │
-│ git.push  │ 2024-04-20 07:41:00+01   │     2 │
-│ git.push  │ 2024-04-20 07:50:00+01   │     2 │
-│ git.fetch │ 2024-04-20 07:50:00+01   │     1 │
-│ git.clone │ 2024-04-20 07:50:00+01   │     2 │
-│ git.fetch │ 2024-04-20 08:04:00+01   │     2 │
-│ git.clone │ 2024-04-20 08:04:00+01   │     2 │
-│ git.push  │ 2024-04-20 08:04:00+01   │     2 │
-├───────────┴──────────────────────────┴───────┤
-│ 23 rows                            3 columns │
-└──────────────────────────────────────────────┘
+
 ```
 
 ### Create a table for the audit event
