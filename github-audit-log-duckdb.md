@@ -46,35 +46,16 @@ CREATE TABLE gitevents AS SELECT * FROM read_json_auto('git-events.json');
 
 ```sql
 SELECT
- action,
   DATE_TRUNC('hour', to_timestamp("@timestamp"/1000)) AS hour,
-  COUNT(*) AS count
+  COUNT(*) AS count,
+   action
 FROM gitevents
 GROUP BY DATE_TRUNC('hour', to_timestamp("@timestamp"/1000)), action
 ORDER BY hour;
 ```
 
 ```
-┌───────────┬──────────────────────────┬───────┐
-│  action   │           hour           │ count │
-│  varchar  │ timestamp with time zone │ int64 │
-├───────────┼──────────────────────────┼───────┤
-│ git.fetch │ 2024-04-19 11:00:00+01   │     8 │
-│ git.clone │ 2024-04-19 11:00:00+01   │     3 │
-│ git.clone │ 2024-04-19 14:00:00+01   │     3 │
-│ git.push  │ 2024-04-19 14:00:00+01   │     2 │
-│ git.fetch │ 2024-04-19 14:00:00+01   │     4 │
-│ git.fetch │ 2024-04-19 15:00:00+01   │     5 │
-│ git.clone │ 2024-04-19 15:00:00+01   │     2 │
-│ git.push  │ 2024-04-20 07:00:00+01   │     4 │
-│ git.fetch │ 2024-04-20 07:00:00+01   │     2 │
-│ git.clone │ 2024-04-20 07:00:00+01   │     5 │
-│ git.push  │ 2024-04-20 08:00:00+01   │     2 │
-│ git.fetch │ 2024-04-20 08:00:00+01   │     2 │
-│ git.clone │ 2024-04-20 08:00:00+01   │     2 │
-├───────────┴──────────────────────────┴───────┤
-│ 13 rows                            3 columns │
-└──────────────────────────────────────────────┘
+
 ```
 
 ### Create a table for the audit event
