@@ -11,7 +11,9 @@ I wanted to be able to do two things quickly:
 1. Run SQL type commands to create a report.
 2. Provide a CSV file to a data analyst.
 
-### Install duckdb
+Let's use a tool called [DuckDB](https://duckdb.org/) to work through these two requirements.
+
+### Install DuckDB
 
 #### MacOS
 
