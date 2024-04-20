@@ -1,4 +1,4 @@
-# Making sense of the GitHub Audit log exports
+# Making sense of the GitHub Audit log exports with DuckDB
 Having [exported git events](https://docs.github.com/en/enterprise-cloud@latest/admin/monitoring-activity-in-your-enterprise/reviewing-audit-logs-for-your-enterprise/exporting-audit-log-activity-for-your-enterprise#exporting-git-events-data) from my organization I wanted to be able to do some quick reports. Install duckdb
 
 ### Reading git audit log events with DuckDB
