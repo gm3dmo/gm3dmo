@@ -178,3 +178,5 @@ ORDER BY minute;
 ### Create a table for the audit event
 Follow the steps for [exporting audit log activity for your enterprise](
 https://docs.github.com/en/enterprise-cloud@latest/admin/monitoring-activity-in-your-enterprise/reviewing-audit-logs-for-your-enterprise/exporting-audit-log-activity-for-your-enterprise#exporting-audit-log-data)
+
+Save the audit log events to a file called`github-enterprise-audit-log.json`.
