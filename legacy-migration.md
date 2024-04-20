@@ -1,7 +1,7 @@
 ### Legacy Migrations
 
 - Dry run. Write out on paper the steps you think you'll need to perform.
-- Minimizde disruption on the legacy machine:
+- Seek to minimize disruption on the legacy machine:
   - Don't try to install software on the legacy machine, it's likely to end up breaking something unexpected and crucial to the operation of the system.
   - Does legacy have enough diskspace for the data dumps you are planning. Don't find out by filling the disk and wrecking things.
 - Identify when the best times are to run jobs like data extracts.
