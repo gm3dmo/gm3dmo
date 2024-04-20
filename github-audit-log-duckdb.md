@@ -30,7 +30,7 @@ v0.10.1 4a89d97db8
 
 ### Reading git audit log events with DuckDB
 
-#### Read the audit.log straight from the file
+#### Read the `audit.log` file directly into DuckDB
 
 Load the `audit.json` file into DuckDB and select:
 
