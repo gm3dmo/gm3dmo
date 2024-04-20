@@ -31,12 +31,12 @@ v0.10.1 4a89d97db8
 
 ### Reading git audit log events with DuckDB
 
-#### Read the `audit-git.log` file directly into DuckDB
+#### Read the `git-events.log` file directly into DuckDB
 
-Load the `audit-git.json` file into DuckDB and select:
+Load the `git-events.json` file into DuckDB and select:
 
 ```sql
-D select * from './audit-git.json';
+D select * from './git-events.json';
 ```
 
 This gives a nice overview of the data:
@@ -117,7 +117,7 @@ D select * from './audit.json' where action = 'git.push';
 └───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘
 ```
 
-#### Create a DuckDB database and import the `audit-git.log` json file
+#### Create a DuckDB database and import the `git-events.log` json file
 
 ```
 duckdb github-enterprise-audit.db
