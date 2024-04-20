@@ -215,15 +215,15 @@ GROUP BY DATE_TRUNC('minute', to_timestamp("@timestamp"/1000)), action
 ORDER BY minute;
 ```
 
-#### Create a CSV report file
+#### Create a CSV report file by hour
 
 ```sql
 COPY (
 SELECT
-  DATE_TRUNC('minute', to_timestamp("@timestamp"/1000)) AS minute,
+  DATE_TRUNC('hour', to_timestamp("@timestamp"/1000)) AS hour,
   action,
   COUNT(*) AS count
 FROM events
-GROUP BY DATE_TRUNC('minute', to_timestamp("@timestamp"/1000)), action
-ORDER BY minute) TO 'events-by-minute.csv' (HEADER, DELIMITER ',');
+GROUP BY DATE_TRUNC('hour', to_timestamp("@timestamp"/1000)), action
+ORDER BY hour) TO 'events-by-hour.csv' (HEADER, DELIMITER ',');
 ```
