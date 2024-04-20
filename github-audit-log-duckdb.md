@@ -3,11 +3,15 @@ Having [exported git events](https://docs.github.com/en/enterprise-cloud@latest/
 
 ### Reading git audit log events with DuckDB
 
-Load the audit.json file into DuckDB and select:
+#### Read the audit.log straight from the file
+
+Load the `audit.json` file into DuckDB and select:
 
 ```sql
 D select * from './audit.json';
 ```
+
+This gives a nice overview of the data:
 
 ```
 ┌───────────────┬──────────────────────┬───────────┬──────────────────────┬───────────┬───┬────────────────────┬──────────────────────┬─────────┬────────────┬─────────┐
@@ -84,6 +88,20 @@ D select * from './audit.json' where action = 'git.push';
 │ 8 rows                                                                                                                                      23 columns (10 shown) │
 └───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘
 ```
+
+#### Create a DuckDB database and import the audit.log json file
+
+```
+duckdb git-events.db
+```
+
+#### Import the audit.json file into a table called "audit"
+
+```sql
+CREATE TABLE audit AS SELECT * FROM read_json_auto('audit.json');
+```
+
+#### Select action and group by minute
 
 ```sql
 SELECT
