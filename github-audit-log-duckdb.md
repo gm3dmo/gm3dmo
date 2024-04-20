@@ -45,36 +45,32 @@ CREATE TABLE gitevents AS SELECT * FROM read_json_auto('git-events.json');
 #### Select action and group by hour
 
 ```sql
+.mode csv
+.headers on
 SELECT
   DATE_TRUNC('hour', to_timestamp("@timestamp"/1000)) AS hour,
-  COUNT(*) AS count,
-   action
+   action,
+   COUNT(*) AS count,
 FROM gitevents
 GROUP BY DATE_TRUNC('hour', to_timestamp("@timestamp"/1000)), action
 ORDER BY hour;
 ```
 
 ```
-┌──────────────────────────┬───────┬───────────┐
-│           hour           │ count │  action   │
-│ timestamp with time zone │ int64 │  varchar  │
-├──────────────────────────┼───────┼───────────┤
-│ 2024-04-19 11:00:00+01   │     8 │ git.fetch │
-│ 2024-04-19 11:00:00+01   │     3 │ git.clone │
-│ 2024-04-19 14:00:00+01   │     2 │ git.push  │
-│ 2024-04-19 14:00:00+01   │     3 │ git.clone │
-│ 2024-04-19 14:00:00+01   │     4 │ git.fetch │
-│ 2024-04-19 15:00:00+01   │     5 │ git.fetch │
-│ 2024-04-19 15:00:00+01   │     2 │ git.clone │
-│ 2024-04-20 07:00:00+01   │     2 │ git.fetch │
-│ 2024-04-20 07:00:00+01   │     4 │ git.push  │
-│ 2024-04-20 07:00:00+01   │     5 │ git.clone │
-│ 2024-04-20 08:00:00+01   │     2 │ git.fetch │
-│ 2024-04-20 08:00:00+01   │     2 │ git.push  │
-│ 2024-04-20 08:00:00+01   │     2 │ git.clone │
-├──────────────────────────┴───────┴───────────┤
-│ 13 rows                            3 columns │
-└──────────────────────────────────────────────┘
+hour,action,count
+"2024-04-19 11:00:00+01",git.fetch,8
+"2024-04-19 11:00:00+01",git.clone,3
+"2024-04-19 14:00:00+01",git.push,2
+"2024-04-19 14:00:00+01",git.clone,3
+"2024-04-19 14:00:00+01",git.fetch,4
+"2024-04-19 15:00:00+01",git.fetch,5
+"2024-04-19 15:00:00+01",git.clone,2
+"2024-04-20 07:00:00+01",git.push,4
+"2024-04-20 07:00:00+01",git.fetch,2
+"2024-04-20 07:00:00+01",git.clone,5
+"2024-04-20 08:00:00+01",git.fetch,2
+"2024-04-20 08:00:00+01",git.clone,2
+"2024-04-20 08:00:00+01",git.push,2
 ```
 
 ### Create a table for the audit event
@@ -112,8 +108,8 @@ ORDER BY minute;
 .headers on
 SELECT
   DATE_TRUNC('minute', to_timestamp("@timestamp"/1000)) AS minute,
-  COUNT(*) AS count,
   action,
+  COUNT(*) AS count
 FROM events
 GROUP BY DATE_TRUNC('minute', to_timestamp("@timestamp"/1000)), action
 ORDER BY minute;
@@ -125,8 +121,8 @@ ORDER BY minute;
 COPY (
 SELECT
   DATE_TRUNC('hour', to_timestamp("@timestamp"/1000)) AS hour,
-  COUNT(*) AS count,
   action,
+  COUNT(*) AS count
 FROM events
 GROUP BY DATE_TRUNC('hour', to_timestamp("@timestamp"/1000)), action
 ORDER BY hour) TO 'events-by-hour.csv' (HEADER, DELIMITER ',');
