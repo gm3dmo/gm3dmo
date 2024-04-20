@@ -55,7 +55,26 @@ ORDER BY hour;
 ```
 
 ```
-
+┌──────────────────────────┬───────┬───────────┐
+│           hour           │ count │  action   │
+│ timestamp with time zone │ int64 │  varchar  │
+├──────────────────────────┼───────┼───────────┤
+│ 2024-04-19 11:00:00+01   │     8 │ git.fetch │
+│ 2024-04-19 11:00:00+01   │     3 │ git.clone │
+│ 2024-04-19 14:00:00+01   │     2 │ git.push  │
+│ 2024-04-19 14:00:00+01   │     3 │ git.clone │
+│ 2024-04-19 14:00:00+01   │     4 │ git.fetch │
+│ 2024-04-19 15:00:00+01   │     5 │ git.fetch │
+│ 2024-04-19 15:00:00+01   │     2 │ git.clone │
+│ 2024-04-20 07:00:00+01   │     2 │ git.fetch │
+│ 2024-04-20 07:00:00+01   │     4 │ git.push  │
+│ 2024-04-20 07:00:00+01   │     5 │ git.clone │
+│ 2024-04-20 08:00:00+01   │     2 │ git.fetch │
+│ 2024-04-20 08:00:00+01   │     2 │ git.push  │
+│ 2024-04-20 08:00:00+01   │     2 │ git.clone │
+├──────────────────────────┴───────┴───────────┤
+│ 13 rows                            3 columns │
+└──────────────────────────────────────────────┘
 ```
 
 ### Create a table for the audit event
@@ -75,24 +94,26 @@ CREATE TABLE events AS SELECT * FROM read_json_auto('events.json',  ignore_error
 #### Extract actions per minute
 
 ```sql
+.mode csv
+.headers on
 SELECT
- action,
   DATE_TRUNC('minute', to_timestamp("@timestamp"/1000)) AS minute,
-  COUNT(*) AS count
+  COUNT(*) AS count,
+  action
 FROM events
 GROUP BY DATE_TRUNC('minute', to_timestamp("@timestamp"/1000)), action
 ORDER BY minute;
 ```
 
-#### Output CSV format
+#### Output CSV format group by minute
 
 ```sql
 .mode csv
 .headers on
 SELECT
- action,
   DATE_TRUNC('minute', to_timestamp("@timestamp"/1000)) AS minute,
-  COUNT(*) AS count
+  COUNT(*) AS count,
+  action,
 FROM events
 GROUP BY DATE_TRUNC('minute', to_timestamp("@timestamp"/1000)), action
 ORDER BY minute;
@@ -104,8 +125,8 @@ ORDER BY minute;
 COPY (
 SELECT
   DATE_TRUNC('hour', to_timestamp("@timestamp"/1000)) AS hour,
+  COUNT(*) AS count,
   action,
-  COUNT(*) AS count
 FROM events
 GROUP BY DATE_TRUNC('hour', to_timestamp("@timestamp"/1000)), action
 ORDER BY hour) TO 'events-by-hour.csv' (HEADER, DELIMITER ',');
