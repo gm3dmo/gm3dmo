@@ -3,6 +3,7 @@
 - 🧹 Work in the support team at GitHub.com
 - 🔭 Interested in parsing log files and converting them to CSV with [syslog-to-csv](http://github.com/gm3dmo/syslog-to-csv). Getting things automated so we don't have to do them manually (like animals).
 - 🔌 Making GitHub's API's a little easier to understand one script at a time using [The-Power](https://github.com/gm3dmo/the-power).
+- 🔌 [Extracting information from GitHub Audit log exports with DuckDB to create CSV files](https://github.com/orgs/community/discussions/123104)
 - 🌱 I’m currently learning [Django](https://www.djangoproject.com/) & [Pandas](https://pandas.pydata.org/).
 - 💬 Ask me about: Problem solving, reproducing bugs/errors, GitHub API's.
 - 📫 How to reach me: [![Linkedin Badge](https://img.shields.io/badge/-davidmorris-blue?style=flat&logo=Linkedin&logoColor=white)](https://www.linkedin.com/in/david-morris-3049a5b/)
