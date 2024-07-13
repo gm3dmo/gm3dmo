@@ -1,4 +1,4 @@
-## Understand the rate limit headers
+## Understand the rate limit headers returned by GitHub
 
 GitHub's API layer serves astounding numbers of requests per day. To do this and keep a free offering for everybody using GitHub we rely on the [rate-limit](https://docs.github.com/en/rest/using-the-rest-api/rate-limits-for-the-rest-api?apiVersion=2022-11-28). Github's API has a generous free offering of 5k requests per hour for authenticated users and even unauthenticated users can interact with the API at a rate of 60 requests per hour.
 
