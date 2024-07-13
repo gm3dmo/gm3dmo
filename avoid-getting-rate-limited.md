@@ -45,7 +45,7 @@ x-github-request-id: D6F0:1DEC14:20E524:2355FB:66925D7A
 Approachable is better than simple.%   
 ```
 
-The rate limit headers are:
+These limits are defined in [checking the status of your rate limit](https://docs.github.com/en/rest/using-the-rest-api/rate-limits-for-the-rest-api?apiVersion=2022-11-28#checking-the-status-of-your-rate-limit). 
 
 ```
 x-ratelimit-limit: 60
@@ -54,9 +54,8 @@ x-ratelimit-reset: 1720869958
 x-ratelimit-resource: core
 x-ratelimit-used: 31
 ```
-These are defined in [checking the status of your rate limit](https://docs.github.com/en/rest/using-the-rest-api/rate-limits-for-the-rest-api?apiVersion=2022-11-28#checking-the-status-of-your-rate-limit). 
 
-`x-ratelimit-reset` is a unix timestamp at which GitHub will reset the limit. On Linux you can convert this to a readable date using:
+`x-ratelimit-reset` is a unix timestamp at which GitHub will reset the limit. On Linux you can convert this to a readable date using the `date` command (there are also websites like [Unixtimestamp](https://www.unixtimestamp.com/) that can show you a conversion:
 
 ```
 date -d @1720869958
@@ -81,18 +80,16 @@ x-ratelimit-used: 32
 
 The `x-ratelimit-remaining` is now 28, `x-ratelimit-used` has increased by 1 to 32. 
 
-
 ## Avoid getting rate limited by GitHub by coding defensively
 
-
 ### Make your code aware of the the rate limit headers
-To help customers [work within our rate limits](https://docs.github.com/en/rest/using-the-rest-api/rate-limits-for-the-rest-api?apiVersion=2022-11-28#checking-the-status-of-your-rate-limit) we provide 5 response headers in requests to the API.
+To help you [work within GitHub's rate limits](https://docs.github.com/en/rest/using-the-rest-api/rate-limits-for-the-rest-api?apiVersion=2022-11-28#checking-the-status-of-your-rate-limit) we provide 5 response headers in requests to the API.
 
 ```
- curl  --silent -w %output{headers1.json}%{header_json}  https://api.github.com/users/1 -o 1.json
+curl  --silent -w %output{headers1.json}%{header_json}  https://api.github.com/users/1 -o 1.json
 ```
  
-### Respond the 
+### Respond to the values in the header
 
 ### Taking things further
 The samples here are for demonstration purposes here isn't code for production. You may want to investigate things like the design patterns for *circuit-breakers* or throttling and discuss with your team the best way of working within GitHub's rate limits for your organization.
