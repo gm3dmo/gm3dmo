@@ -12,3 +12,4 @@ To demonstrate these we can use a snippet of python.
 ### Taking things further
 The samples here are for demonstration purposes here isn't code for production. You may want to investigate things like the design patterns for *circuit-breakers* or throttling and discuss with your team the best way of working within GitHub's rate limits for your organization.
 
+[Easier header picking with curl](https://daniel.haxx.se/blog/2022/03/24/easier-header-picking-with-curl/)
