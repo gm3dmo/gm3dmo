@@ -2,11 +2,56 @@
 
 GitHub's API layer serves astounding numbers of requests per day. To do this and keep a free offering for everybody using GitHub we rely on the [rate-limit](https://docs.github.com/en/rest/using-the-rest-api/rate-limits-for-the-rest-api?apiVersion=2022-11-28). Github's API has a generous free offering of 5k requests per hour for authenticated users and even unauthenticated users can interact with the API at a rate of 60 requests per hour.
 
+To keep this explanation simple we start by using the [Zen of Github](https://docs.github.com/en/rest/meta/meta?apiVersion=2022-11-28#get-the-zen-of-github) api endpoint to get a random sentence from the [Zen of GitHub](https://ben.balter.com/2015/08/12/the-zen-of-github/)
+
+```
+curl https://api.github.com/zen
+```
+and the response:
+```
+Approachable is better than simple.
+```
+
+Adjust the curl command to get the response headers:
+
+```
+curl  --silent -i  https://api.github.com/zen
+```
+
+```
+HTTP/2 200 
+date: Sat, 13 Jul 2024 10:56:58 GMT
+content-type: text/plain;charset=utf-8
+x-github-api-version-selected: 2022-11-28
+access-control-expose-headers: ETag, Link, Location, Retry-After, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Used, X-RateLimit-Resource, X-RateLimit-Reset, X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval, X-GitHub-Media-Type, X-GitHub-SSO, X-GitHub-Request-Id, Deprecation, Sunset
+access-control-allow-origin: *
+strict-transport-security: max-age=31536000; includeSubdomains; preload
+x-frame-options: deny
+x-content-type-options: nosniff
+x-xss-protection: 0
+referrer-policy: origin-when-cross-origin, strict-origin-when-cross-origin
+content-security-policy: default-src 'none'
+vary: Accept-Encoding, Accept, X-Requested-With
+server: github.com
+x-ratelimit-limit: 60
+x-ratelimit-remaining: 29
+x-ratelimit-reset: 1720869958
+x-ratelimit-resource: core
+x-ratelimit-used: 31
+accept-ranges: bytes
+content-length: 35
+x-github-request-id: D6F0:1DEC14:20E524:2355FB:66925D7A
+
+Approachable is better than simple.%   
+```
+
 ### Make your code aware of the the rate limit headers
 To help customers [work within our rate limits](https://docs.github.com/en/rest/using-the-rest-api/rate-limits-for-the-rest-api?apiVersion=2022-11-28#checking-the-status-of-your-rate-limit) we provide 5 response headers in requests to the API.
 
-To demonstrate these we can use a snippet of python.
-
+```
+ curl  --silent -w %output{headers1.json}%{header_json}  https://api.github.com/users/1 -o 1.json
+```
+ 
 ### Respond the 
 
 ### Taking things further
