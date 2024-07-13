@@ -63,6 +63,8 @@ date -d @1720869958
 Sat Jul 13 11:25:58 AM UTC 2024
 ```
 
+Our rate limit will reset back to zero on Saturday July 13th 11:58:58 2024.
+
 Make another request and inspect the headers:
 
 ```
