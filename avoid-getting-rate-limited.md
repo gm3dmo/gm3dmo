@@ -8,7 +8,7 @@ To keep this explanation simple we use the [Zen of Github](https://docs.github.c
 curl https://api.github.com/zen
 ```
 
-and the response:
+and the response (responses may differ):
 
 ```
 Approachable is better than simple.
