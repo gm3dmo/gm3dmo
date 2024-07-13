@@ -62,14 +62,12 @@ x-ratelimit-used: 31
 On Linux
 ```
 date -d @1720869958
-Sat Jul 13 11:25:58 AM UTC 2024
 ```
 
 
 On Mac
 ```
 date -j -f %s 1720869958
-Sat 13 Jul 2024 12:25:58 BST
 ```
 
 Our rate limit will reset back to zero on Saturday July 13th 11:58:58 2024.
