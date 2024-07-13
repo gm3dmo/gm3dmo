@@ -1,4 +1,4 @@
-## Avoid getting rate limited by GitHub by coding defensively
+## Understand the rate limit headers
 
 GitHub's API layer serves astounding numbers of requests per day. To do this and keep a free offering for everybody using GitHub we rely on the [rate-limit](https://docs.github.com/en/rest/using-the-rest-api/rate-limits-for-the-rest-api?apiVersion=2022-11-28). Github's API has a generous free offering of 5k requests per hour for authenticated users and even unauthenticated users can interact with the API at a rate of 60 requests per hour.
 
@@ -44,6 +44,20 @@ x-github-request-id: D6F0:1DEC14:20E524:2355FB:66925D7A
 
 Approachable is better than simple.%   
 ```
+
+The rate limit headers are:
+
+```
+x-ratelimit-limit: 60
+x-ratelimit-remaining: 29
+x-ratelimit-reset: 1720869958
+x-ratelimit-resource: core
+x-ratelimit-used: 31
+```
+These are defined in [checking the status of your rate limit](https://docs.github.com/en/rest/using-the-rest-api/rate-limits-for-the-rest-api?apiVersion=2022-11-28#checking-the-status-of-your-rate-limit)
+
+## Avoid getting rate limited by GitHub by coding defensively
+
 
 ### Make your code aware of the the rate limit headers
 To help customers [work within our rate limits](https://docs.github.com/en/rest/using-the-rest-api/rate-limits-for-the-rest-api?apiVersion=2022-11-28#checking-the-status-of-your-rate-limit) we provide 5 response headers in requests to the API.
