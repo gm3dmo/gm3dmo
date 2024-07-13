@@ -70,7 +70,7 @@ On Mac
 date -j -f %s 1720869958
 ```
 
-Our rate limit will reset back to zero on Saturday July 13th 11:58:58 2024.
+GitHub will reset the rate limit used  back to 0 on Saturday July 13th 11:58:58 2024.
 
 Make another request and inspect the headers:
 
