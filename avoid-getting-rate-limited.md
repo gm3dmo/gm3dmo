@@ -12,7 +12,7 @@ and the response:
 Approachable is better than simple.
 ```
 
-Adjust the curl command to get the response headers:
+Adjust the `curl` command to include response headers:
 
 ```
 curl  --silent -i  https://api.github.com/zen
@@ -54,7 +54,31 @@ x-ratelimit-reset: 1720869958
 x-ratelimit-resource: core
 x-ratelimit-used: 31
 ```
-These are defined in [checking the status of your rate limit](https://docs.github.com/en/rest/using-the-rest-api/rate-limits-for-the-rest-api?apiVersion=2022-11-28#checking-the-status-of-your-rate-limit)
+These are defined in [checking the status of your rate limit](https://docs.github.com/en/rest/using-the-rest-api/rate-limits-for-the-rest-api?apiVersion=2022-11-28#checking-the-status-of-your-rate-limit). 
+
+`x-ratelimit-reset` is a unix timestamp at which GitHub will reset the limit. On Linux you can convert this to a readable date using:
+
+```
+date -d @1720869958
+Sat Jul 13 11:25:58 AM UTC 2024
+```
+
+Make another request and inspect the headers:
+
+```
+curl  --silent -i  https://api.github.com/zen
+```
+
+```
+x-ratelimit-limit: 60
+x-ratelimit-remaining: 28
+x-ratelimit-reset: 1720869958
+x-ratelimit-resource: core
+x-ratelimit-used: 32
+```
+
+The `x-ratelimit-remaining` is now 28, `x-ratelimit-used` has increased by 1 to 32. 
+
 
 ## Avoid getting rate limited by GitHub by coding defensively
 
