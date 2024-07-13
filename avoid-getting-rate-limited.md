@@ -59,13 +59,12 @@ x-ratelimit-used: 31
 
 `x-ratelimit-reset` is a unix timestamp at which GitHub will reset the limit. On Linux/Mac you can convert this to a readable date using the `date` command (there are also websites like [Unixtimestamp](https://www.unixtimestamp.com/) that can show you a conversion:
 
-```
 On Linux
 ```
 date -d @1720869958
 Sat Jul 13 11:25:58 AM UTC 2024
 ```
-```
+
 
 On Mac
 ```
