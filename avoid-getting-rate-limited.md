@@ -5,7 +5,7 @@ GitHub's API layer serves astounding numbers of requests per day. To do this and
 To keep this explanation simple we use the [Zen of Github](https://docs.github.com/en/rest/meta/meta?apiVersion=2022-11-28#get-the-zen-of-github) api endpoint to get a random sentence from the [Zen of GitHub](https://ben.balter.com/2015/08/12/the-zen-of-github/)
 
 ```
-curl https://api.github.com/zen
+curl --silent https://api.github.com/zen
 ```
 
 and the response (responses may differ):
@@ -14,7 +14,7 @@ and the response (responses may differ):
 Approachable is better than simple.
 ```
 
-Adjust the `curl` command to include response headers:
+Add `-i` to the `curl` command to include response headers:
 
 ```
 curl  --silent -i  https://api.github.com/zen
