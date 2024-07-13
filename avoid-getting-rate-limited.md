@@ -1,13 +1,15 @@
 ## Understand the rate limit headers returned by GitHub
 
-GitHub's API layer serves astounding numbers of requests per day. To do this and keep a free offering for everybody using GitHub we rely on the [rate-limit](https://docs.github.com/en/rest/using-the-rest-api/rate-limits-for-the-rest-api?apiVersion=2022-11-28). Github's API has a generous free offering of 5k requests per hour for authenticated users and even unauthenticated users can interact with the API at a rate of 60 requests per hour.
+GitHub's API layer serves astounding numbers of requests per day. To do this and keep a free offering for everybody using GitHub a [rate-limit](https://docs.github.com/en/rest/using-the-rest-api/rate-limits-for-the-rest-api?apiVersion=2022-11-28) is enforced. Github's API has a generous free offering of 5k requests per hour for authenticated users and even unauthenticated users can interact with the API at a rate of 60 requests per hour.
 
-To keep this explanation simple we start by using the [Zen of Github](https://docs.github.com/en/rest/meta/meta?apiVersion=2022-11-28#get-the-zen-of-github) api endpoint to get a random sentence from the [Zen of GitHub](https://ben.balter.com/2015/08/12/the-zen-of-github/)
+To keep this explanation simple we use the [Zen of Github](https://docs.github.com/en/rest/meta/meta?apiVersion=2022-11-28#get-the-zen-of-github) api endpoint to get a random sentence from the [Zen of GitHub](https://ben.balter.com/2015/08/12/the-zen-of-github/)
 
 ```
 curl https://api.github.com/zen
 ```
+
 and the response:
+
 ```
 Approachable is better than simple.
 ```
@@ -42,7 +44,7 @@ accept-ranges: bytes
 content-length: 35
 x-github-request-id: D6F0:1DEC14:20E524:2355FB:66925D7A
 
-Approachable is better than simple.%   
+Approachable is better than simple.   
 ```
 
 These limits are defined in [checking the status of your rate limit](https://docs.github.com/en/rest/using-the-rest-api/rate-limits-for-the-rest-api?apiVersion=2022-11-28#checking-the-status-of-your-rate-limit). 
