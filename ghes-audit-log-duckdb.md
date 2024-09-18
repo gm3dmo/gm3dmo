@@ -1,10 +1,14 @@
+## GitHub Enterprise Server and DuckDB
+Don't be afraid to use Copilot to help formulate your queries. It can take a bit of brute force but even non experts can quickly get useful queries.
 
-Be careful. Doing this on a large production server you'll need to make sure and not fill the root with `dump.json`. It's going to dump the entire audit log.
+### Sourcing logs from a GitHub Enterprise Server:
+Be careful because doing this on a large production server you'll need to make sure and not fill the root with `dump.json`. It's going to dump the entire audit log. SSH to the primary GHES server and run:
 
 ```
-/usr/local/share/enterprise/ghe-es-dump-json 'http://localhost:9200/audit_log*' > dump.json
+/usr/local/share/enterprise/ghe-es-dump-json 'http://localhost:9200/audit_log*' > audit-log.json
 ```
 
+Copy the `audit-log.json data analysis machine (not the GHES server):
 
 ```
 scp -P 122 admin@${ghes_hostname}:dump.json
