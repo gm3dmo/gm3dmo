@@ -32,7 +32,7 @@ v0.10.1 4a89d97db8
 #### Create a DuckDB database and import the `git-events.log` json file
 
 ```
-duckdb github-enterprise-audit.db
+duckdb audit_log.db
 ```
 
 #### Import the `git-events.json` file into a table called "gitevents"
