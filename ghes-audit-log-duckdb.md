@@ -5,17 +5,17 @@ Don't be afraid to use Copilot to help formulate your queries. It can take a bit
 Be careful because doing this on a large production server you'll need to make sure and not fill the root with `dump.json`. It's going to dump the entire audit log. SSH to the primary GHES server and run:
 
 ```
-/usr/local/share/enterprise/ghe-es-dump-json 'http://localhost:9200/audit_log*' > audit-log.json
+/usr/local/share/enterprise/ghe-es-dump-json 'http://localhost:9200/audit_log*' > ghes-audit-log.json
 ```
 
-Copy the `audit-log.json data analysis machine (not the GHES server):
+Copy the `ghes-audit-log.json` file to your analysis machine (not the GHES server):
 
 ```
 scp -P 122 admin@${ghes_hostname}:dump.json
 ```
 
 ```sql
-CREATE TABLE audit_log AS SELECT * FROM read_json_auto('dump.json');
+CREATE TABLE audit_log AS SELECT * FROM read_json_auto('ghes-audit-log.json');
 ```
 
 ```sql
