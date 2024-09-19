@@ -11,7 +11,7 @@ Be careful because doing this on a large production server you'll need to make s
 Copy the `ghes-audit-log.json` file to your analysis machine (not the GHES server):
 
 ```
-scp -P 122 admin@${ghes_hostname}:dump.json
+scp -P 122 admin@${ghes_hostname}:ghes-audit-log.json .
 ```
 
 ```sql
