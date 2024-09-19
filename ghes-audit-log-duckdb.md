@@ -14,6 +14,14 @@ Copy the `ghes-audit-log.json` file to your analysis machine (not the GHES serve
 scp -P 122 admin@${ghes_hostname}:ghes-audit-log.json .
 ```
 
+Start DuckdB:
+
+```
+duckdb ghes-audit-log.db
+```
+
+Create the table:
+
 ```sql
 CREATE TABLE audit_log AS SELECT * FROM read_json_auto('ghes-audit-log.json');
 ```
