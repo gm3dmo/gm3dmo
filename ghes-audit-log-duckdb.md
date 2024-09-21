@@ -14,17 +14,27 @@ Copy the `ghes-audit-log.json` file to your analysis machine (not the GHES serve
 scp -P 122 admin@${ghes_hostname}:ghes-audit-log.json .
 ```
 
+### Simple method to load data with no schema
+
 Start DuckdB:
 
 ```
 duckdb ghes-audit-log.db
 ```
 
+```sql
+CREATE TABLE audit_log AS SELECT * FROM read_json_auto('./**/ghes-audit-log.json', ignore_errors = true);
+```
+
+
+###  Method to load data with schema
+
 Create the table:
 
 ```sql
 CREATE TABLE audit_log AS SELECT * FROM read_json_auto('ghes-audit-log.json');
 ```
+
 
 ```sql
 CREATE TABLE extracted_audit_log AS
