@@ -8,3 +8,5 @@ do
     gh repo -R ${repo_name} deploy-key list;\
 done
 ```
+
+Tested: 2024-10-26
