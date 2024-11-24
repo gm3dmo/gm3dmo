@@ -25,15 +25,18 @@ SELECT *,
 FROM audit_log_raw;
 ```
 
+Lets see what the table looks like:
 ```sql
 SELECT 
-        action, _document_id, 
+        action,
+        _document_id, 
         actor,
-        CAST(TO_TIMESTAMP("@timestamp" / 1000) AS DATETIME) AS timestamp_date
+        _datetime
     FROM 
         audit_log;
 ```
 
+Result:
 ```
 ┌────────────────────────────────────────────────────────────────┬──────────────────────────┬──────────────────────────┬─────────────────────────┐
 │                             action                             │       _document_id       │          actor           │     timestamp_date      │
@@ -45,11 +48,15 @@ SELECT
 │ workflows.completed_workflow_run                               │ 9kXsKTCX-tMXQa2cPrPENw   │ pipcrispy                │ 2024-09-01 01:49:57.667 │
 ```
 
-Let's say we want to see the full record for `_document_id` **IbtO9HBdURGCy6Y2ppQFFg** we can use DuckDB's `.mode line` command to make the output format in lines:
+View the full record for `_document_id` **IbtO9HBdURGCy6Y2ppQFFg** using DuckDB's `.mode line` command to make the output format in lines:
 
 ```sql
  .mode line
 D select * from audit_log where _document_id = 'IbtO9HBdURGCy6Y2ppQFFg';
+```
+
+Result:
+```
                    @timestamp = 1725151795508
                  _document_id = IbtO9HBdURGCy6Y2ppQFFg
                        action = workflows.created_workflow_run
