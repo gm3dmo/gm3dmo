@@ -25,7 +25,7 @@ SELECT *,
 FROM audit_log_raw;
 ```
 
-Use *SUMMARIZE* to get an idea about what is in the columns:
+Use [*SUMMARIZE*](https://duckdb.org/docs/guides/meta/summarize.html) to get an idea about what is in the columns:
 
 ```sql
 SUMMARIZE SELECT action, _datetime, actor_id FROM audit_log;
