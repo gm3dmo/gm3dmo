@@ -32,6 +32,8 @@ SUMMARIZE SELECT action, _datetime, actor_id FROM audit_log;
 ```
 
 Result:
+
+```
 ┌─────────────┬──────────────────────┬──────────────────────┬──────────────────────┬───────────────┬───┬──────────────────────┬──────────────────────┬────────┬─────────────────┐
 │ column_name │     column_type      │         min          │         max          │ approx_unique │ … │         q50          │         q75          │ count  │ null_percentage │
 │   varchar   │       varchar        │       varchar        │       varchar        │     int64     │   │       varchar        │       varchar        │ int64  │  decimal(9,2)   │
@@ -42,6 +44,7 @@ Result:
 ├─────────────┴──────────────────────┴──────────────────────┴──────────────────────┴───────────────┴───┴──────────────────────┴──────────────────────┴────────┴─────────────────┤
 │ 3 rows                                                                                                                                                   12 columns (9 shown) │
 └───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘
+```
 
 Have a look at the *audit_log* table:
 
@@ -143,7 +146,7 @@ SELECT
 
 ```sql
 SELECT 
-    DATE_TRUNC('day', TO_TIMESTAMP("@timestamp" / 1000)) AS day,
+    _datetime,
     action,
     actor,
     COUNT(*) AS activity_count
@@ -156,6 +159,8 @@ GROUP BY
 ORDER BY 
     activity_count DESC;
 ```
+
+Result:
 
 ```
 ┌──────────────────────────┬───────────┬──────────────────────────┬────────────────┐
