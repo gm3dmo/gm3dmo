@@ -3,7 +3,19 @@ Download the audit log data stream. I've been using [Azure Storage Explorer](htt
 Create the `audit_log` table in DuckDB. I am ignoring errors and not building a schema here you may want to do more than this:
 
 ```sql
-CREATE TABLE audit_log AS SELECT * FROM read_json_auto('./**/*.json.log.gz', ignore_errors = true);
+SET threads TO 16;
+SET memory_limit = '16GB';
+SET temp_directory='/tmp';
+SET preserve_insertion_order = false;
+CREATE TABLE audit_log_raw AS SELECT * FROM read_json_auto('./**/*.json.log.gz', ignore_errors = true);
+```
+
+Now create a view `audit_log` which has a human readable *_datetime* column
+```sql
+CREATE VIEW audit_log AS
+SELECT *,
+    to_timestamp("@timestamp" / 1000) AS _datetime
+FROM audit_log_raw;
 ```
 
 ```sql
