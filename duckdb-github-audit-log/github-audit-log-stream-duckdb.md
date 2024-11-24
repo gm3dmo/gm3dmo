@@ -1,4 +1,4 @@
-Download the audit log data stream. I've been using [Azure Storage Explorer](https://azure.microsoft.com/en-us/products/storage/storage-explorer/) for my test server but you man want to script something.
+Download the audit log data stream. In this document [Azure Storage Explorer](https://azure.microsoft.com/en-us/products/storage/storage-explorer/) was used for that.
 
 Start DuckDB with a database:
 
@@ -25,7 +25,26 @@ SELECT *,
 FROM audit_log_raw;
 ```
 
-Lets see what the table looks like:
+Use *SUMMARIZE* to get an idea about what is in the columns:
+
+```sql
+SUMMARIZE SELECT action, _datetime, actor_id FROM audit_log;
+```
+
+Result:
+┌─────────────┬──────────────────────┬──────────────────────┬──────────────────────┬───────────────┬───┬──────────────────────┬──────────────────────┬────────┬─────────────────┐
+│ column_name │     column_type      │         min          │         max          │ approx_unique │ … │         q50          │         q75          │ count  │ null_percentage │
+│   varchar   │       varchar        │       varchar        │       varchar        │     int64     │   │       varchar        │       varchar        │ int64  │  decimal(9,2)   │
+├─────────────┼──────────────────────┼──────────────────────┼──────────────────────┼───────────────┼───┼──────────────────────┼──────────────────────┼────────┼─────────────────┤
+│ action      │ VARCHAR              │ account.plan_change  │ workflows.rerun_wo…  │           211 │ … │                      │                      │ 180487 │            0.00 │
+│ _datetime   │ TIMESTAMP WITH TIM…  │ 2024-01-01 01:08:2…  │ 2024-11-23 09:42:4…  │        172120 │ … │ 2024-08-06 05:10:2…  │ 2024-09-05 07:03:3…  │ 180487 │            3.11 │
+│ actor_id    │ BIGINT               │ 0                    │ 188897073            │           709 │ … │ 63502882             │ 107637877            │ 180487 │           12.05 │
+├─────────────┴──────────────────────┴──────────────────────┴──────────────────────┴───────────────┴───┴──────────────────────┴──────────────────────┴────────┴─────────────────┤
+│ 3 rows                                                                                                                                                   12 columns (9 shown) │
+└───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘
+
+Have a look at the *audit_log* table:
+
 ```sql
 SELECT 
         action,
@@ -47,6 +66,7 @@ Result:
 │ workflows.created_workflow_run                                 │ IbtO9HBdURGCy6Y2ppQFFg   │ pipcrispy                │ 2024-09-01 01:49:55.508 │
 │ workflows.completed_workflow_run                               │ 9kXsKTCX-tMXQa2cPrPENw   │ pipcrispy                │ 2024-09-01 01:49:57.667 │
 ```
+
 
 View the full record for `_document_id` **IbtO9HBdURGCy6Y2ppQFFg** using DuckDB's `.mode line` command to make the output format in lines:
 
