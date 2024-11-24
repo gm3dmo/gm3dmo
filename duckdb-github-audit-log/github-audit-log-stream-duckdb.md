@@ -1,6 +1,13 @@
 Download the audit log data stream. I've been using [Azure Storage Explorer](https://azure.microsoft.com/en-us/products/storage/storage-explorer/) for my test server but you man want to script something.
 
+Start DuckDB with a database:
+
+```bash
+duckdb audit-log.db
+```
+
 Create the `audit_log` table in DuckDB. I am ignoring errors and not building a schema here you may want to do more than this:
+
 
 ```sql
 SET threads TO 16;
