@@ -6,13 +6,16 @@ Create the `audit_log` table in DuckDB. I am ignoring errors and not building a 
 CREATE TABLE audit_log AS SELECT * FROM read_json_auto('./**/*.json.log.gz', ignore_errors = true);
 ```
 
-```
+```sql
 SELECT 
         action, _document_id, 
         actor,
         CAST(TO_TIMESTAMP("@timestamp" / 1000) AS DATETIME) AS timestamp_date
     FROM 
         audit_log;
+```
+
+```
 ┌────────────────────────────────────────────────────────────────┬──────────────────────────┬──────────────────────────┬─────────────────────────┐
 │                             action                             │       _document_id       │          actor           │     timestamp_date      │
 │                            varchar                             │         varchar          │         varchar          │        timestamp        │
