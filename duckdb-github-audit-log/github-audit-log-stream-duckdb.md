@@ -145,17 +145,18 @@ SELECT
 ### Create a report on the busiest git users:
 
 ```sql
-SELECT 
-    _datetime,
+SELECT
+    DATE_TRUNC('day', TO_TIMESTAMP("@timestamp" / 1000)) AS day,
     action,
     actor,
+    repo,
     COUNT(*) AS activity_count
 FROM 
     audit_log
 WHERE
     action LIKE 'git.%'
 GROUP BY 
-    day, action, actor
+    day, action, actor, repo
 ORDER BY 
     activity_count DESC;
 ```
