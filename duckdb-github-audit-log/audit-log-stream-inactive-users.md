@@ -14,7 +14,7 @@ SELECT *
 FROM read_csv_auto('enterprise_users.csv');
 ```
 
-Query to find enterprise_users with no activity for 90 days:
+Query to find enterprise_users with no activity for 30 days:
 
 ```sql
 SELECT
