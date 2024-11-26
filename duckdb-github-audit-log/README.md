@@ -1,2 +1,2 @@
 #### GitHub Audit log Stream
-[Setup Instructions](audit-log-stream-inactive-users.md)
+[Query for users inactive 30 days](audit-log-stream-inactive-users.md)
