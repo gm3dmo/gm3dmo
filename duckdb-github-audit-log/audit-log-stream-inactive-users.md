@@ -46,7 +46,7 @@ Result:
 │       varchar            │  timestamp with time zone  │
 ├──────────────────────────┼────────────────────────────┤
 │ pipcrispy                │ 2024-03-28 20:11:03.923+00 │
-│ Pantalaimon              │ 2024-03-28 20:11:04.795+00 │
+│ robin-of-loxley          │ 2024-03-28 20:11:04.795+00 │
 │ roger-de-courcey         │ 2024-06-06 18:01:37.851+01 │
 │ banned-from-urgent       │ 2024-10-08 16:14:50.991+01 │
 │ somebody-we-used-to-know │                            │
