@@ -1,6 +1,7 @@
 ### Finding All GitHub Apps in an Organization or all Enterprise Organizations
 
-[](https://img.shields.io/badge/tested_by-gm3dmo)
+![](https://img.shields.io/badge/tested_by-gm3dmo)
+
 
 
 For audit purposes it may be desirable to have a list of the GitHub Apps installed in an organization. To get such a list for all organizations in an enterprise the GraphQL object [enterpriseorganizationmembershipconnection](https://docs.github.com/en/graphql/reference/objects#enterpriseorganizationmembershipconnection) may be used. The Power has a [graphql-list-enterprise-organizations.sh](https://github.com/gm3dmo/the-power/blob/main/graphql-list-enterprise-organizations.sh) to get all the organizations in the enterprise and for each organization [list app installations for an organization]() endpoint to return details of the GitHub Apps installed in the organization.
