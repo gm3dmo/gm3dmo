@@ -26,6 +26,7 @@ Use `list-app-installations-for-an-organization.sh` with an organization name to
 
 Returns:
 
+```
 {
   "total_count": 3,
   "installations": [
