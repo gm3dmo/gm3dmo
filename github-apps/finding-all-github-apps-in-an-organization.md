@@ -1,6 +1,7 @@
 ### Finding All GitHub Apps in an Organization or all Enterprise Organizations
 
 ![tested_by](https://img.shields.io/badge/tested_by-gm3dmo-blue)
+
 ![tested_on](https://img.shields.io/badge/tested_on-ghec-blue)
 
 
