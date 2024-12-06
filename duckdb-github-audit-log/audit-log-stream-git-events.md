@@ -62,7 +62,7 @@ external_identity_username =
 ```
 
 
-### Git push (git.push) via https
+### Git push (git.push) via https (transport_protocol_name = http)
 
 `transport_protocol_name = http`
 
@@ -123,7 +123,7 @@ external_identity_username =
                  _datetime = 2024-11-15 21:46:37.166+00
 ```
 
-### Git fetch (git.fetch)
+### Git fetch (git.fetch) via http (transport_protocol_name = http)
 
 ```
                     action = git.fetch
