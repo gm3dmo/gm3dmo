@@ -1,5 +1,9 @@
+## Samples of Git events from GitHub Audit log stream
 
-Git clone via ssh
+These are example events captured from a test organization. See the [git events](https://docs.github.com/en/enterprise-cloud@latest/admin/monitoring-activity-in-your-enterprise/reviewing-audit-logs-for-your-enterprise/audit-log-events-for-your-enterprise#git) for details.
+
+
+### Git clone (git.clone) via ssh
 
 ```
                     action = git.clone
@@ -58,7 +62,7 @@ external_identity_username =
 ```
 
 
-Git push via https
+### Git push (git.push) via https
 
 `transport_protocol_name = http`
 
@@ -118,3 +122,6 @@ external_identity_username =
                external_id = 
                  _datetime = 2024-11-15 21:46:37.166+00
 ```
+
+### Git fetch (git.fetch)
+
