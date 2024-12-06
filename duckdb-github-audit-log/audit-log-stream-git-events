@@ -125,3 +125,58 @@ external_identity_username =
 
 ### Git fetch (git.fetch)
 
+```
+                    action = git.fetch
+                user_agent = go-git/5.x
+                  token_id = 0
+              hashed_token = doLjkzyPI0Mo0fHFVVBIJTCPdkM/WM+3vUqfi0tKajE=
+  programmatic_access_type = GitHub App server-to-server token
+                     actor = datadog-forest-town[bot]
+                  actor_id = 111058333
+                started_at = 
+                     event = 
+                      name = 
+           workflow_run_id = 
+               head_branch = 
+                  head_sha = 
+                trigger_id = 
+                run_number = 
+               workflow_id = 
+                      repo = forest-town/repo-2500334
+                   repo_id = 
+               public_repo = 
+                       org = forest-town
+                    org_id = 86825428
+              _document_id = gyjTag8IXy_oyibNG03V5g==
+                @timestamp = 1704218531887
+                created_at = 
+            operation_type = 
+                  business = gm3dmo-enterprise-cloud-testing
+               business_id = 3082
+  external_identity_nameid = 
+                     topic = 
+              completed_at = 
+                conclusion = 
+               run_attempt = 
+        transport_protocol = 1
+   transport_protocol_name = http
+                repository = forest-town/repo-2500334
+         repository_public = false
+                   user_id = 0
+          environment_name = 
+          is_hosted_runner = 
+                  job_name = 
+          job_workflow_ref = 
+           runner_group_id = 
+         runner_group_name = 
+                 runner_id = 
+             runner_labels = 
+               runner_name = 
+            secrets_passed = 
+            actor_location = {'country_code': US}
+                  actor_ip = 44.192.28.49
+                      user = 
+external_identity_username = 
+               external_id = 
+                 _datetime = 2024-01-02 18:02:11.887+00
+```
