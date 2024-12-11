@@ -15,13 +15,8 @@ Returns:
 
 ```
 forest-town
-forest-test-org
-gm3dmo-test6
 crispy
 owazu
-pipcrispy12
-pulepule
-shedburgh
 ```
 
 Use `list-app-installations-for-an-organization.sh` with an organization name to get the apps installed:
