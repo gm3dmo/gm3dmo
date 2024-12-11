@@ -5,7 +5,7 @@
 ![tested_date](https://img.shields.io/badge/tested_date-2024--12--04-blue)
 
 
-For audit purposes it may be desirable to have a list of the GitHub Apps installed in an organization. To get such a list for all organizations in an enterprise the GraphQL object [enterpriseorganizationmembershipconnection](https://docs.github.com/en/graphql/reference/objects#enterpriseorganizationmembershipconnection) may be used. The Power has a [graphql-list-enterprise-organizations.sh](https://github.com/gm3dmo/the-power/blob/main/graphql-list-enterprise-organizations.sh) to get all the organizations in the enterprise and for each organization [list app installations for an organization]() endpoint to return details of the GitHub Apps installed in the organization.
+For audit purposes it may be desirable to have a list of the GitHub Apps installed in an organization. To get such a list for all organizations in an enterprise the GraphQL object [enterpriseorganizationmembershipconnection](https://docs.github.com/en/graphql/reference/objects#enterpriseorganizationmembershipconnection) may be used. The Power has a [graphql-list-enterprise-organizations.sh](https://github.com/gm3dmo/the-power/blob/main/graphql-list-enterprise-organizations.sh) to get all the organizations in the enterprise and for each organization [list app installations for an organization](https://docs.github.com/en/enterprise-cloud@latest/rest/orgs/orgs?apiVersion=2022-11-28#list-app-installations-for-an-organization) endpoint to return details of the GitHub Apps installed in the organization.
 
 ```
 ./graphql-list-enterprise-organizations.sh | jq -r '.data.enterprise.organizations.nodes.[].name'
