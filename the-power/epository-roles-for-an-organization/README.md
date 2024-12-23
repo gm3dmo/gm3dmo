@@ -1,8 +1,23 @@
 ### The Power: Explore repository roles for an organization 
 Use the `build-testcase-permissions` script to learn about [repository roles for an organization](https://docs.github.com/en/organizations/managing-user-access-to-your-organizations-repositories/managing-repository-roles/repository-roles-for-an-organization)
 
-Prior to running `build-testcase-permissions`, edit `.gh-api-examples.conf` set the *team_members* to contain 5 members you need for your organization. These 
+### Prerequisites
+Prior to running `build-testcase-permissions`, edit `.gh-api-examples.conf` set the *team_members* to contain 5 members you need for your organization. These users will be assigned to a team based on the privileges:
+
+- read
+- triage
+- write
+- maintain
+- admin
 
 ```bash
 team_members="roger-de-courcey robin-of-loxley banned-from-urgent monty-bojangle grillpan-eddie"
 ```
+
+#### Set the outside collaborator
+Edit `.gh-api-examples.conf` set the *repo_collaborator* to contain a user to invite as an [outside collaborators to the repository](https://docs.github.com/en/enterprise-cloud@latest/organizations/managing-user-access-to-your-organizations-repositories/managing-outside-collaborators/adding-outside-collaborators-to-repositories-in-your-organization)
+```
+repo_collaborator="mona"
+```
+
+### Run build-testcase-permissions
