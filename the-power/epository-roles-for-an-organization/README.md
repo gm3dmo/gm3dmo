@@ -2,11 +2,11 @@
 Use the [`build-testcase-permissions`](https://github.com/gm3dmo/the-power/blob/main/build-testcase-permissions) script to learn about [repository roles for an organization](https://docs.github.com/en/organizations/managing-user-access-to-your-organizations-repositories/managing-repository-roles/repository-roles-for-an-organization).
 
 ### Prerequisites
-Prior to running `build-testcase-permissions`, edit `.gh-api-examples.conf` set the *team_members* to contain 5 members you need for your organization. These users will be assigned to a team based on the privileges:
+Prior to running `build-testcase-permissions`, edit `.gh-api-examples.conf` set the *team_members* to contain 5 members you need for your organization. These users will be assigned to a team based on the privileges in order (least privilege first):
 
-- read
+- read (pull)
 - triage
-- write
+- write (push)
 - maintain
 - admin
 
