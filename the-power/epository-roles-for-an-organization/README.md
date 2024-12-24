@@ -1,8 +1,12 @@
 ### The Power: Explore repository roles for an organization 
-Use the [`build-testcase-permissions`](https://github.com/gm3dmo/the-power/blob/main/build-testcase-permissions) script to learn about [repository roles for an organization](https://docs.github.com/en/organizations/managing-user-access-to-your-organizations-repositories/managing-repository-roles/repository-roles-for-an-organization).
+This note covers:
+
+- Use the [`build-testcase-permissions`](https://github.com/gm3dmo/the-power/blob/main/build-testcase-permissions) script to learn about [repository roles for an organization](https://docs.github.com/en/organizations/managing-user-access-to-your-organizations-repositories/managing-repository-roles/repository-roles-for-an-organization).
+- Explore permission sources with [gh-graphql-repo-users-with-permission-sources.sh
+](https://github.com/gm3dmo/the-power/blob/main/gh-graphql-repo-users-with-permission-sources.sh)
 
 ### Prerequisites
-Prior to running `build-testcase-permissions`, edit `.gh-api-examples.conf` set the *team_members* to contain 5 members needed. 
+Prior to running `build-testcase-permissions`, edit `.gh-api-examples.conf` set the *team_members* to contain 5 members needed to cover the 5 possible roles. 
 
 ```bash
 team_members="roger-de-courcey robin-of-loxley banned-from-urgent monty-bojangle grillpan-eddie"
