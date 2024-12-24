@@ -51,10 +51,18 @@ repo_collaborator="mona"
 [`gh-graphql-repo-users-with-permission-sources.sh`
 ](https://github.com/gm3dmo/the-power/blob/main/gh-graphql-repo-users-with-permission-sources.sh)
 
+Use [`tee`](https://en.wikipedia.org/wiki/Tee_(command)) (if available to capture the output to a file for onward processing
+```bash
+./gh-graphql-repo-users-with-permission-sources.sh | tee repo-report.json | jq -r
+```
+
+If tee is not available:
 
 ```bash
-./gh-graphql-repo-users-with-permission-sources.sh | jq -r
+./gh-graphql-repo-users-with-permission-sources.sh > repo-report.json
 ```
+
+The repo-report.json file:
 
 ```json
 {
@@ -205,5 +213,11 @@ repo_collaborator="mona"
   }
 }
 ```
+Use jq to remove permissions sourced through *"Team"* membership:
+
+```bash
+jq '.data.repository.collaborators.edges |= map(.permissionSources |= map(select(.source.permissionSource != "Team")))' repo-report.json
+ ```
+
 
 
