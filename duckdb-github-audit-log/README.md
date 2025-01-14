@@ -7,6 +7,7 @@ Bear in mind:
 - The [GitHub hosted copy of the audit log is limited to 180 days](https://docs.github.com/en/enterprise-cloud@latest/admin/monitoring-activity-in-your-enterprise/reviewing-audit-logs-for-your-enterprise/about-the-audit-log-for-your-enterprise)
 - [Git events are not included in search results](https://docs.github.com/en/enterprise-cloud@latest/admin/monitoring-activity-in-your-enterprise/reviewing-audit-logs-for-your-enterprise/searching-the-audit-log-for-your-enterprise#search-based-on-the-action-performed) on the web UI.
 - [By default, only events from the past three months are displayed. To view older events, you must specify a date range with the created parameter. ](https://docs.github.com/en/enterprise-cloud@latest/admin/monitoring-activity-in-your-enterprise/reviewing-audit-logs-for-your-enterprise/searching-the-audit-log-for-your-enterprise#about-search-for-the-enterprise-audit-log)
+- [You can configure a retention period for audit log data and see index storage details. After you configure a retention period, you can enable or disable Git-related events from appearing in the audit log](https://docs.github.com/en/enterprise-server@3.15/admin/monitoring-activity-in-your-enterprise/reviewing-audit-logs-for-your-enterprise/configuring-the-audit-log-for-your-enterprise#about-audit-log-configuration)
 
 With audit log streaming established a new data source for activity across your enterprise is available.
   
