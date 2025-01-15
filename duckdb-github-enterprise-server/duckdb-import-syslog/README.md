@@ -85,6 +85,13 @@ Result:
 Run Time (s): real 30.742 user 110.845174 sys 202.077361
 ```
 
+The 14Gb of syslog has been reduced significantly by DuckDB and is now 48Mb of database file:
+
+```
+ls -lh duckdb
+-rwxr-xr-x 1 gm3dmo gm3dmo 48M Nov  4 09:01 duckdb
+```
+
 #### Query the syslog for "streaks"
 
 Switch on the timer and column modes:
@@ -162,3 +169,4 @@ dependency-graph-api-aqueduct-worker  31              12947954    12947984  2025
 
 Run Time (s): real 6.760 user 67.779807 sys 176.301531
 ```
+
