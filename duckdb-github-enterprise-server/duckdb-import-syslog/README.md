@@ -14,8 +14,10 @@ git clone https://github.com/gm3dmo/syslog-to-csv
 #### Run syslog-to-csv.py to create a syslog.csv file
 
 ```
-pypy3 syslog-to-csv/syslog-to-csv.py --csv-file system-logs/syslog.cs system-logs/syslog
+pypy3 syslog-to-csv/syslog-to-csv.py --csv-file system-logs/syslog.csv system-logs/syslog
 ```
+
+The output looks something like:
 
 ```
 INFO:syslog-to-csv:filename: system-logs/syslog
@@ -23,6 +25,33 @@ INFO:syslog-to-csv:filename.stem: syslog
 INFO:syslog-to-csv:filename.suffix: ()
 INFO:syslog-to-csv:filename.size: 13.5 GB
 INFO:syslog-to-csv:filename.log_type: syslog
+INFO:syslog-to-csv:Converted file: system-logs/syslog size type: syslog to CSV file system-logs/syslog.csv size 13152522261 bytes or roughly 12.2 GB.
+```
+
+syslog-to-csv.py may warn about lines that could not be processed. These may be ignored:
+
+```
+WARNING:syslog-to-csv:squib: line 3047437 does not have host/daemon portion.
+WARNING:syslog-to-csv:squib: line 3047438 does not have host/daemon portion.
+WARNING:syslog-to-csv:squib: line 3047439 does not have host/daemon portion.
+WARNING:syslog-to-csv:Could not parse: 3047440 (  "BalancerAttributes": null,) not enough values to unpack (expected 3, got 1)
+WARNING:syslog-to-csv:squib: line 3047441 is not minimum length of (15) characters
+WARNING:syslog-to-csv:squib: line 3047442 does not have host/daemon portion.
+WARNING:syslog-to-csv:Could not parse: 3047443 (}. Err: connection error: desc = "error reading server preface: read tcp 127.0.0.1:57334->127.0.0.1:6002: use of closed network connection") time data '2025 }. Err: connect' does not match format '%Y %b %d %H:%M:%S'
+WARNING:syslog-to-csv:squib: line 3048660 does not have host/daemon portion.
+WARNING:syslog-to-csv:squib: line 3048661 does not have host/daemon portion.
+WARNING:syslog-to-csv:squib: line 3048662 does not have host/daemon portion.
+WARNING:syslog-to-csv:Could not parse: 3048663 (  "BalancerAttributes": null,) not enough values to unpack (expected 3, got 1)
+WARNING:syslog-to-csv:squib: line 3048664 is not minimum length of (15) characters
+WARNING:syslog-to-csv:squib: line 3048665 does not have host/daemon portion.
+WARNING:syslog-to-csv:Could not parse: 3048666 (}. Err: connection error: desc = "transport: Error while dialing dial tcp 127.0.0.1:6002: operation was canceled") time data '2025 }. Err: connect' does not match format '%Y %b %d %H:%M:%S'
+WARNING:syslog-to-csv:squib: line 15110048 does not have host/daemon portion.
+WARNING:syslog-to-csv:squib: line 15110049 does not have host/daemon portion.
+WARNING:syslog-to-csv:squib: line 15110050 does not have host/daemon portion.
+WARNING:syslog-to-csv:Could not parse: 15110051 (  "BalancerAttributes": null,) not enough values to unpack (expected 3, got 1)
+WARNING:syslog-to-csv:squib: line 15110052 is not minimum length of (15) characters
+WARNING:syslog-to-csv:squib: line 15110053 does not have host/daemon portion.
+WARNING:syslog-to-csv:Could not parse: 15110054 (}. Err: connection error: desc = "transport: Error while dialing dial tcp 127.0.0.1:6002: operation was canceled") time data '2025 }. Err: connect' does not match format '%Y %b %d %H:%M:%S'
 ```
 
 #### Download and unzip DuckDB
