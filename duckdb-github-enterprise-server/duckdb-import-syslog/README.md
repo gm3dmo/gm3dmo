@@ -79,6 +79,12 @@ CREATE TABLE syslog AS
      SELECT * FROM 'system-logs/syslog.csv';
 ```
 
+Result:
+
+```
+Run Time (s): real 30.742 user 110.845174 sys 202.077361
+```
+
 #### Query the syslog for "streaks"
 
 Switch on the timer and column modes:
