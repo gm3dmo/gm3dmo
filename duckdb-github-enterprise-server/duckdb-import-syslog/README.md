@@ -74,6 +74,7 @@ unzip duckdb_cli-linux-amd64.zip
 #### Import the `syslog.csv` file into Duckdb
 
 ```sql
+.timer on
 CREATE TABLE syslog AS
      SELECT * FROM 'system-logs/syslog.csv';
 ```
