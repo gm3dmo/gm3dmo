@@ -92,6 +92,7 @@ Switch on the timer and column modes:
 ```
 .timer on
 .mode column
+
 ```
 
 Run the query:
@@ -140,6 +141,7 @@ SELECT
 FROM daemon_max_streaks
 ORDER BY streak_length DESC
 LIMIT 10;
+
 ```
 
 Result:
