@@ -1,14 +1,14 @@
 ## Import syslog file into DucdDB
 
-### Open the support bundle
-### Clone the syslog-to-csv repo
-### Run syslog-to-csv.py to create a syslog.csv file
+#### Open the support bundle
+#### Clone the syslog-to-csv repo
+#### Run syslog-to-csv.py to create a syslog.csv file
 
 ```
 pypy3 syslog-to-csv/syslog-to-csv.py --csv-file system-logs/syslog.cs system-logs/syslog
 ```
 
-### Download and unzip DuckDB
+#### Download and unzip DuckDB
 
 ```
 curl -L -O https://github.com/duckdb/duckdb/releases/download/v1.1.3/duckdb_cli-linux-amd64.zip
@@ -18,21 +18,21 @@ curl -L -O https://github.com/duckdb/duckdb/releases/download/v1.1.3/duckdb_cli-
 unzip duckdb_cli-linux-amd64.zip
 ```
 
-### Create a DuckDB database
+#### Create a DuckDB database
 
 ```
 ./duckdb syslog.db
 ```
 
 
-### Import the `syslog.csv` file into Duckdb
+#### Import the `syslog.csv` file into Duckdb
 
 ```sql
 CREATE TABLE syslog AS
      SELECT * FROM 'system-logs/syslog.csv';
 ```
 
-## Query the syslog for "streaks"
+#### Query the syslog for "streaks"
 
 Switch on the timer and column modes:
 
@@ -87,6 +87,7 @@ Run the query:
   ORDER BY duration DESC
   LIMIT 10;
 ```
+
 Result:
 
 ```
