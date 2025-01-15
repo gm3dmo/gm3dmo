@@ -5,7 +5,7 @@
 ### Run syslog-to-csv.py to create a syslog.csv file
 
 ```
-pypy3 syslog-to-csv.py --csv-file syslog.csv ../system-logs/syslog
+pypy3 syslog-to-csv/syslog-to-csv.py --csv-file system-logs/syslog.cs system-logs/syslog
 ```
 
 ### Download and unzip DuckDB
@@ -29,7 +29,7 @@ unzip duckdb_cli-linux-amd64.zip
 
 ```sql
 CREATE TABLE syslog AS
-     SELECT * FROM 'syslog-to-csv/syslog.csv';
+     SELECT * FROM 'system-logs/syslog.csv';
 ```
 
 ## Query the syslog for "streaks"
