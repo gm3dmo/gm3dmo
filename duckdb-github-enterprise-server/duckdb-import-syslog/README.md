@@ -97,48 +97,49 @@ Switch on the timer and column modes:
 Run the query:
 
 ```sql
-    SELECT
-      daemon,
-      line_number,
-      real_date,
-      line_number - ROW_NUMBER() OVER (PARTITION BY daemon ORDER BY line_number) AS sequence_id
-    FROM syslog
-    WHERE daemon IS NOT NULL
-  ),
-  streak_details AS (
-    SELECT
-      daemon,
-      sequence_id,
-      COUNT(*) as streak_length,
-      MIN(line_number) as start_line,
-      MAX(line_number) as end_line,
-      MIN(real_date) as start_time,
-      MAX(real_date) as end_time
-    FROM sequence_groups
-    GROUP BY daemon, sequence_id
-  ),
-  daemon_max_streaks AS (
-    SELECT DISTINCT ON (daemon)
-      daemon,
-      streak_length,
-      start_line,
-      end_line,
-      start_time,
-      end_time
-    FROM streak_details
-    ORDER BY daemon, streak_length DESC
-  )
-  SELECT
+WITH sequence_groups AS (
+  SELECT 
     daemon,
-    streak_length as longest_streak,
+    line_number,
+    real_date,
+    line_number - ROW_NUMBER() OVER (PARTITION BY daemon ORDER BY line_number) AS sequence_id
+  FROM syslog
+  WHERE daemon IS NOT NULL
+),
+streak_details AS (
+  SELECT 
+    daemon,
+    sequence_id,
+    COUNT(*) as streak_length,
+    MIN(line_number) as start_line,
+    MAX(line_number) as end_line,
+    MIN(real_date) as start_time,
+    MAX(real_date) as end_time
+  FROM sequence_groups
+  GROUP BY daemon, sequence_id
+),
+daemon_max_streaks AS (
+  SELECT DISTINCT ON (daemon)
+    daemon,
+    streak_length,
     start_line,
     end_line,
     start_time,
-    end_time,
-    AGE(end_time, start_time) as duration
-  FROM daemon_max_streaks
-  ORDER BY duration DESC
-  LIMIT 10;
+    end_time
+  FROM streak_details
+  ORDER BY daemon, streak_length DESC
+)
+SELECT 
+  daemon,
+  streak_length as longest_streak,
+  start_line,
+  end_line,
+  start_time,
+  end_time,
+  AGE(end_time, start_time) as duration
+FROM daemon_max_streaks
+ORDER BY streak_length DESC
+LIMIT 10;
 ```
 
 Result:
