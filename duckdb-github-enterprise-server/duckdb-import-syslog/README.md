@@ -1,11 +1,28 @@
-## Import syslog file into DucdDB
+
+## Query a Syslog File for Streaks
+A streak is where the same deamon writes to the syslog more than once in a row. Streaks of long duration may be  problematic.
 
 #### Open the support bundle
-#### Clone the syslog-to-csv repo
+
+#### Clone the syslog-to-csv repo into the support bundle
+
+```
+git clone https://github.com/gm3dmo/syslog-to-csv
+```
+
+
 #### Run syslog-to-csv.py to create a syslog.csv file
 
 ```
 pypy3 syslog-to-csv/syslog-to-csv.py --csv-file system-logs/syslog.cs system-logs/syslog
+```
+
+```
+INFO:syslog-to-csv:filename: system-logs/syslog
+INFO:syslog-to-csv:filename.stem: syslog
+INFO:syslog-to-csv:filename.suffix: ()
+INFO:syslog-to-csv:filename.size: 13.5 GB
+INFO:syslog-to-csv:filename.log_type: syslog
 ```
 
 #### Download and unzip DuckDB
