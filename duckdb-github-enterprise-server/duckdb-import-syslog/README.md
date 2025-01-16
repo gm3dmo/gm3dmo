@@ -170,3 +170,14 @@ dependency-graph-api-aqueduct-worker  31              12947954    12947984  2025
 Run Time (s): real 6.760 user 67.779807 sys 176.301531
 ```
 
+### Babeld
+
+```
+pypy3 klp.py --stats babeld-logs/babeld.log  --output-format csv > babeld-logs/babeld.csv -k ts,pid,tid,version,proto,id,http_url,http_ua,ip,xff_ip,repo,cmd,duration_ms,sr,ss,fs_sent,fs_recv,client_recv,client_send,log_level,msg,banner,best_kex,best_sigtype,best_cipher,best_mac,kex,keytype,sigtype,cipher,hmac,fp_sha256,pk_ms,srcp,dstp,fs_host,repo_public,gpv,client_sent,fsc_ms,ac_ms,ssh_cmd,user_agent,cid,cactive,ctotal,code,status,auth_tries,probe_ok,probe_fail,cr,creason,imode,user,http_status,auth_status,have_count,want_count,vk_ms,out_hash,entries_total,entries_freed,hits_ok,hits_unknown,expired_via_get,repl_host,ridx,sb_rs_po,cb,prerx,ct,postrx,nru,gt_ms,srq_ok,srq_bad,hin,hout,sin,sout,siocin,siocout,fds,fde,conn_progress
+```
+
+
+```.timer on
+CREATE TABLE babeld AS
+     SELECT * FROM 'babeld-logs/babeld.csv';
+```
