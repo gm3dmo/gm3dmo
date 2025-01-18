@@ -27,7 +27,7 @@ pypy3 klp.py --stats babeld-logs/babeld.log --output-format csv > syslog-to-csv/
 
 ## Syslog
 
-pypy3 syslog-to-csv/syslog-to-csv.py --csv-file syslog-to-csv/syslog.csv system-logs/syslog 2> syslog-to-csv/syslog-cvs.errors
+pypy3 syslog-to-csv/syslog-to-csv.py --csv-file syslog-to-csv/syslog.csv system-logs/syslog >syslog-to-csv/syslog-csv.errors
 
 ./duckdb ${duckdb_database} < syslog-to-csv/duckdb/syslog/syslog.ddl
 ./duckdb ${duckdb_database} < syslog-to-csv/duckdb/syslog/syslog-timespan.sql
