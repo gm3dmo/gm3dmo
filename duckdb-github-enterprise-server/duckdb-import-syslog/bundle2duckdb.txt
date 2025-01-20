@@ -38,3 +38,16 @@ pypy3 syslog-to-csv/syslog-to-csv.py --append --csv-file syslog-to-csv/syslog.cs
 ### Split the syslog
 pypy3 syslog-to-csv/syslog-daemon-splitter.py system-logs/syslog --sankey
 pypy3 syslog-to-csv/syslog-daemon-splitter.py system-logs/syslog.1 --sankey
+
+
+## hookshot-go
+hookshot_keys="Timestamp,SeverityText,InstrumentationScope,Body,host.name,package,client_id,method,service,rpc.jsonrpc.error_message,rpc.jsonrpc.error_code,exception.message,exception.stacktrace,exception.type,gh.hookshot.queue,process,status,verb,path,uri,elapsed,user_agent,github_request_id,parent,hook_id"
+
+rm syslog-to-csv/hookshot-go.csv
+pypy3 klp.py --stats system-logs/split-logs-syslog.1/hookshot-go.log -k ${hookshot_keys} --output-format csv  > syslog-to-csv/hookshot-go.csv
+pypy3 klp.py --stats system-logs/split-logs-syslog/hookshot-go.log --no-header -k ${hookshot_keys} --output-format csv  >> syslog-to-csv/hookshot-go.csv
+
+#
+./duckdb ${duckdb_database} < syslog-to-csv/duckdb/hookshot.ddl
+#
+
