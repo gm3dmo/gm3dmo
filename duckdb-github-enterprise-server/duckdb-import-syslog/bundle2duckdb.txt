@@ -35,7 +35,7 @@ pypy3 syslog-to-csv/syslog-to-csv.py --append --csv-file syslog-to-csv/syslog.cs
 ./duckdb ${duckdb_database} < syslog-to-csv/duckdb/syslog/syslog-timespan.sql
 #
 
-### Split the syslog
+### Syslog: Split the syslog
 pypy3 syslog-to-csv/syslog-daemon-splitter.py system-logs/syslog --sankey
 pypy3 syslog-to-csv/syslog-daemon-splitter.py system-logs/syslog.1 --sankey
 
@@ -51,3 +51,6 @@ pypy3 klp.py --stats system-logs/split-logs-syslog/hookshot-go.log --no-header -
 ./duckdb ${duckdb_database} < syslog-to-csv/duckdb/hookshot.ddl
 #
 
+## Authzd
+
+## Unicorn
