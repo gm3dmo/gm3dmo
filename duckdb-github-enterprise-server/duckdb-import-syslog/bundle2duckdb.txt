@@ -69,3 +69,5 @@ gitauth_keys="worker,Timestamp,InstrumentationScope,SeverityText,TraceId,SpanId,
 
 pypy3 klp.py --stats github-logs/gitauth.log -k ${gitauth_keys} --output-format csv > syslog-to-csv/gitauth.csv
 
+./duckdb ${duckdb_database} < syslog-to-csv/duckdb/gitauth.ddl
+
