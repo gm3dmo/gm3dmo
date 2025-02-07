@@ -1,3 +1,5 @@
+# This script will turn a bundle into a Duckdb database
+
 # https://github.com/gm3dmo/syslog-to-csv/README.md
 rm -rf syslog-to-csv
 git clone https://github.com/gm3dmo/syslog-to-csv
@@ -43,31 +45,33 @@ pypy3 syslog-to-csv/syslog-daemon-splitter.py system-logs/syslog.1 --sankey
 ## hookshot-go
 hookshot_keys="Timestamp,SeverityText,InstrumentationScope,Body,host.name,package,client_id,method,service,rpc.jsonrpc.error_message,rpc.jsonrpc.error_code,exception.message,exception.stacktrace,exception.type,gh.hookshot.queue,process,status,verb,path,uri,elapsed,user_agent,github_request_id,parent,hook_id"
 
+### hookshot-go generate csv
 rm syslog-to-csv/hookshot-go.csv
 pypy3 klp.py --stats system-logs/split-logs-syslog.1/hookshot-go.log -k ${hookshot_keys} --output-format csv  > syslog-to-csv/hookshot-go.1.csv
 pypy3 klp.py --stats system-logs/split-logs-syslog/hookshot-go.log --no-header -k ${hookshot_keys} --output-format csv  >> syslog-to-csv/hookshot-go.csv
 
-#
+### hookshot-go load into duckdb
 ./duckdb ${duckdb_database} < syslog-to-csv/duckdb/hookshot.ddl
-#
 
-## Authzd
 
 ## Unicorn
 # A naive way to get the keys:
 # head -10000 docker/container-logs/github-unicorn.log | pypy3 klp.py -S
 # Doing things like this isn't going to make for a robust solution
+# but it will do for now for me.
 
 unicorn_keys="Timestamp,InstrumentationScope,SeverityText,Body,TraceId,SpanId,ParentSpanId,TraceFlags,ldap.transaction_id,code.namespace,code.function,ldap.search.filter,ldap.search_attributes,ldap.search.result.count,ldap.search.page.count,ldap.search.base,gh.sdk.name,gh.sdk.version,service.name,service.version,deployment.environment,host.name,gh.ldap.transaction_id,gh.ldap.search_filter,gh.ldap.search_attributes,gh.ldap.search_result.count,gh.ldap.search_page.count,gh.ldap.search_base,gh.ldap.search.scope,ldap.search.attributes,user,user_spammy,repo,user_session_id,time_zone,controller,action,stateless,now,request_id,datacenter,server_id,remote_address,request_method,request_host,path_info,content_length,content_type,user_agent,accept,language,referer,x_requested_with,status,elapsed,url,worker_request_count,worker_pid,worker_number,request_category,gh.request_id,http.host,http.scheme,http.method,http.target,http.url,http.status_code,http.client_ip,http.server_name,http.request.header.referer,http.request.header.accept,http.request.header.accept_language,http.request.header.x_requested_with,http.user_agent,http.response.header.content_type,auth_fingerprint,version,auth,is_protected_by_hmac,x_forwarded_for,route,unconverted_path,http.response_content_length,gh.request.api.route,ldap.bind.result,oauth_access_id,limited_limit,limited_ttl,limited_key,limited,current_user,query_string,x_real_ip,org,gh.repo.name_with_owner,gh.repo.visibility,gh.repo.id,selected_api_version,selected_api_version_reason,gh.auth.token_attempt,gh.auth.auth_attempt_data,gh.auth.result,gh.auth.origin,gh.auth.login,gh.auth.raw_login,gh.enduser.id,gh.auth.hashed_token,gh.auth.token_type,gh.auth.programmatic_access_type,gh.auth.token_id,oauth_scopes,oauth_party,gh.pull_request.codeowners.file_size,gh.pull_request.codeowners.ref,gh.pull_request.codeowners.num_paths,gh.pull_request.codeowners.num_rules,ldap.dn,integration_id,installation_id,parent_installation_id,rate_limit,rate_limit_remaining,rate_limit_key,rate_limit_used,rate_limit_reset,rate_limit_family,graphql_global_id_type,gh.catalog_service,gh.webhook.delivery_guid,gh.webhook.event_type,gh.repo.global_id,gh.elasticsearch.index,gh.elasticsearch.query,gh.elasticsearch.escaped_query,gh.actor.login,gh.actor.spammy,gh.search.context,http.request.header.x_original_user_agent,gh.context.from,gh.originating_request_id,http.route,gh.api.query,gh.search.server.timed_out,gh.search.cache_key.value,requested_api_version,twirp_client_name,gh.org.id,gh.org.login,gh.authzd.fgp,job,gh.check_run.id,gh.check_run.status,gh.check_run.conclusion,gh.check_run.created_at,gh.check_run.updated_at,gh.check_run.started_at,gh.check_suite.id,gh.check_suite.status,gh.check_suite.created_at,gh.check_suite.updated_at,pair_id,gh.check_suite.rollup_status,gh.check_suite.previous_status,gh.notifications.rollup_summary.id,gh.notifications.rollup_summary.method,gh.notifications.update_summary.subject_type,gh.notifications.update_summary.subject_id,gh.notifications.update_summary.status,gh.notifications.update_summary.duration,gh.notifications_list.id,gh.notifications_list.klass,gh.notifications_thread.id,gh.notifications_thread.klass,gh.repo.name,gh.context.url,gh.actor.id,gh.actor.ip,gh.actor.ip_was,gh.actor.location,gh.actor.location_was,associated_user.ids,associated_user.logins,session.id,client_id,update_at_was,gh.check_suite.new_status,oauth_application_id,ldap.base,gh.auth.result.message,gh.auth.failure.type,gh.auth.failure.reason,app_name,gh.issue.id,gh.issue.orchestration.id,gh.issue.orchestration.type,gh.issue.orchestration.state,gh.issue.orchestration.step_name,gh.issue.orchestration.attempts,gh.issue.orchestration.data,lfs_deploy_key_header,lfs_auth_scope,lfs_verify_reason,lfs_media_upload_scope,installations_repositories_all,repositories_count,gh.actions.workflow_run.id,gh.actions.synchronize_search_reason,gh.actor.class_name,gh.branch_protection_rule.rule_suite.ref_name,gh.branch_protection_rule.rule_suite.before_commit,gh.branch_protection_rule.rule_suite.after_commit,gh.branch_protection_rule.rule_suite.rule_commit,gh.branch_protection_rule.rule_suite.rules_fulfilled,gh.branch_protection_rule.rule_suite.result,gh.branch_protection_rule.rule_suite.rule_runs,commit_metadata_keys,gh.search.error.name,exception.type,exception.message,exception.stacktrace,gh.creator_id,gh.deployment_id,gh.deployment.ref,gh.deployment.check_run_id,gh.deployment.new_latest_deployment_status_id,gh.deployment.new_latest_status_state,gh.deployment.previous_latest_environment,gh.deployment.new_latest_environment,gh.deployment.previous_latest_environment_id,gh.deployment.new_latest_environment_id,gh.deployment.previous_latest_deployment_status_id,gh.deployment.previous_latest_status_state,gh.check_suite.conclusion"
 
 pypy3 klp.py --stats docker/container-logs/github-unicorn.log -k ${unicorn_keys} --output-format csv > syslog-to-csv/github-unicorn.csv
 
 
-echo "gitauth"
+## gitauth
 
 gitauth_keys="worker,Timestamp,InstrumentationScope,SeverityText,TraceId,SpanId,ParentSpanId,TraceFlags,gh.request_id,code.namespace,gh.auth.password_attempt,gh.auth.token_attempt,gh.auth.auth_attempt_data,code.function,gh.auth.result,gh.auth.origin,gh.auth.login,gh.auth.raw_login,gh.enduser.id,gh.sdk.name,gh.sdk.version,service.name,service.version,deployment.environment,host.name,http.request.header.x_original_user_agent,gh.catalog_service,rpc.method,gh.repo.path,gh.repo.name_with_owner,network.protocol.name,gh.gitauth.member,gh.actor.id,gh.gitauth.filtered_member,gh.gitauth.credential,gh.gitauth.status,now,request_id,datacenter,remote_address,request_method,request_host,path_info,content_length,content_type,user_agent,accept,referer,status,elapsed,url,worker_request_count,worker_pid,worker_number,request_category,route,http.host,http.scheme,http.method,http.target,http.url,http.status_code,http.client_ip,http.request.header.referer,http.request.header.accept,http.user_agent,http.response.header.content_type,http.response_content_length,gh.request.api.route,Body,ldap.dn,gh.gitauth.key,gh.gitauth.fingerprint_sha256,gh.auth.hashed_token,gh.auth.token_type,gh.auth.programmatic_access_type,gh.auth.token_id,gh.oauth.access.id,ldap.base,gh.auth.result.message,gh.auth.failure.type,gh.auth.failure.reason"
 
+### gitauth generate csv
 pypy3 klp.py --stats github-logs/gitauth.log -k ${gitauth_keys} --output-format csv > syslog-to-csv/gitauth.csv
 
+### gitauth load into ducckb
 ./duckdb ${duckdb_database} < syslog-to-csv/duckdb/gitauth.ddl
 
