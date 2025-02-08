@@ -75,3 +75,10 @@ pypy3 klp.py --stats github-logs/gitauth.log -k ${gitauth_keys} --output-format 
 ### gitauth load into ducckb
 ./duckdb ${duckdb_database} < syslog-to-csv/duckdb/gitauth.ddl
 
+## gitrpcd
+
+# head -10000  system-logs/split-logs-syslog/gitrpcd.log | pypy3 klp.py -S
+gitrpcd_keys=time,level,msg,app,sha,host,request_id,component,method,request_url,user_agent,command,path,at,elapsed,exit,url,pid,duration,args,error,errors,max_rss_bytes,samples,quarantine_id,service,twirp_status,twirp_method,twirp_service,twirp_package,remote_addr,http_version,spec,request_duration,disk_free_mib,disk_total_mib,load1,uptime_seconds,create,fsync,repository_type,repository_id,emails,stderr
+
+pypy3 klp.py --stats system-logs/split-logs-syslog.1/gitrpcd.log -k ${gitrpcd_keys} --output-format csv  > syslog-to-csv/gitrpcd.csv
+pypy3 klp.py --stats system-logs/split-logs-syslog/gitrpcd.log -k ${gitrpcd_keys} --no-header --output-format csv  >> syslog-to-csv/gitrpcd.csv
