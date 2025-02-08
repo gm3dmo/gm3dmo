@@ -84,3 +84,6 @@ pypy3 klp.py --stats system-logs/split-logs-syslog.1/gitrpcd.log -k ${gitrpcd_ke
 pypy3 klp.py --stats system-logs/split-logs-syslog/gitrpcd.log -k ${gitrpcd_keys} --no-header --output-format csv  >> syslog-to-csv/gitrpcd.csv
 ./duckdb ${duckdb_database} < syslog-to-csv/duckdb/gitrpc.ddl
 
+
+
+
