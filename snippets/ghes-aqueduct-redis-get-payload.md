@@ -22,7 +22,7 @@ done
 
 ```
 
-#### Display message payloads from the queue
+#### Display message metadata from the queue
 
 ```bash
 for guid in $(redis-cli -n 2 keys "aql:metadata:github-production:*" | grep issue_comment_orchestration | awk -F: '{print $5}')
