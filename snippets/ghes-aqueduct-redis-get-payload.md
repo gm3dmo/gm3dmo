@@ -36,3 +36,19 @@ ghe-aqueduct-info | tail -n+7 | jq '.queues[] | select(.depth != 0)'
 ```
 
 
+#### Set the timezone
+
+```bash
+sudo timedatectl set-timezone Asia/Hong_Kong
+```
+
+```
+admin@gm3dmo-038cac817cc352265-ghe-test-org-primary:~$ timedatectl
+               Local time: Tue 2025-03-04 17:41:49 HKT
+           Universal time: Tue 2025-03-04 09:41:49 UTC
+                 RTC time: Tue 2025-03-04 09:41:48
+                Time zone: Asia/Hong_Kong (HKT, +0800)
+System clock synchronized: yes
+              NTP service: active
+          RTC in local TZ: no
+```
