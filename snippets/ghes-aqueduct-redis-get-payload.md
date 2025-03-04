@@ -81,3 +81,8 @@ nomad run /etc/nomad-jobs/redis/redis.hcl
 ```
 
 
+### What is the hardware clock set to
+```
+sudo hwclock
+2025-03-04 20:14:01.871505+08:00
+```
