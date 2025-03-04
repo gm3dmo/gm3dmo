@@ -71,3 +71,12 @@ done
  nomad stop redis
  nomad run /etc/nomad-jobs/redis/redis.hcl
 ```
+
+
+```shell
+nomad stop redis
+export TZ=GMT+8
+nomad run /etc/nomad-jobs/redis/redis.hcl
+```
+
+
