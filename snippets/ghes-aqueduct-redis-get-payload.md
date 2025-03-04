@@ -55,3 +55,13 @@ System clock synchronized: yes
               NTP service: active
           RTC in local TZ: no
 ```
+
+### Effective date in docker container
+
+```
+for d in $(docker ps | awk '{print $NF}')
+do
+printf "%s" "$d"
+docker exec -it $d date
+done
+```
