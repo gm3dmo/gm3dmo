@@ -96,10 +96,9 @@ date
 sudo hwclock
 sudo timedatectl status
 cat /etc/timezone
-cat /etc/localtime
-# If hwclock -c has been run then this file will exist
-cat /etc/adjtime
-# /etc/adjtime is not present on an as GitHub appliance
+cat /etc/localtimecat /etc/adjtime
+
+# If hwclock -c has been run then the /etc/adjtime will exist
 ```
 
 
