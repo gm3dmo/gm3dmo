@@ -1,4 +1,13 @@
+#### Ghostty
 
+Fix ghostty terminal:
+
+```
+infocmp -x | ssh -p 122 admin@54.67.78.60 -- tic -x -
+```
+
+
+Display messages from the queue
 ```bash
 for guid in $(redis-cli -n 2 keys "aql:payload:github-production:*" | grep issue_comment_orchestration | awk -F: '{print $5}')
 do
@@ -8,9 +17,22 @@ do
 done
 ```
 
+#### Pause
+```
+ghe-aqueduct pause --queue issue_comment_orchestration
+```
 
-Fix ghostty:
+#### Resume
+```
+ghe-aqueduct resume --queue issue_comment_orchestration
+```
+
+
+
+#### Aqueuduct select queues with messages > 0
 
 ```
-infocmp -x | ssh -p 122 admin@54.67.78.60 -- tic -x -
+ghe-aqueduct-info | tail -n+7 | jq '.queues[] | select(.depth != 0)'
 ```
+
+
