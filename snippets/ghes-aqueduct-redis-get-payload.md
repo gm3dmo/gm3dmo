@@ -65,3 +65,9 @@ printf "%s" "$d"
 docker exec -it $d date
 done
 ```
+
+### Restart nomad
+```
+ nomad stop redis
+ nomad run /etc/nomad-jobs/redis/redis.hcl
+```
