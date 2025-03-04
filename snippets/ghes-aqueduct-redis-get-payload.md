@@ -25,7 +25,6 @@ done
 #### Display message metadata from the queue
 
 ```bash
-set -x
 for guid in $(redis-cli -n 2 keys "aql:payload:github-production:*" | grep issue_comment_orchestration | awk -F: '{print $5}')
 do
     redis-cli -n 2 hgetall aql:metadata:github-production:issue_comment_orchestration:${guid} | jq -r
