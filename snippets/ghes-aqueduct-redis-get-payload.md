@@ -32,6 +32,13 @@ do
 done
 ```
 
+```bash
+for guid in $(redis-cli -n 2 keys "aql:payload:github-production:*" | grep issue_comment_orchestration | awk -F: '{print $5}')
+do
+    echo redis-cli -n 2 hgetall aql:metadata:github-production:issue_comment_orchestration:${guid}
+done
+```
+
 #### Pause
 ```
 ghe-aqueduct pause --queue issue_comment_orchestration
