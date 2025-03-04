@@ -86,3 +86,15 @@ nomad run /etc/nomad-jobs/redis/redis.hcl
 sudo hwclock
 2025-03-04 20:14:01.871505+08:00
 ```
+
+#### Um wieviel Uhr ist es Herr Wolf
+
+```
+set -x
+sudo hwclock
+sudo timedatectl status
+cat /etc/timezone
+cat /etc/localtime
+```
+
+
