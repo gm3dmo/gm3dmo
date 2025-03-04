@@ -91,10 +91,13 @@ sudo hwclock
 
 ```
 set -x
+
+date
 sudo hwclock
 sudo timedatectl status
 cat /etc/timezone
 cat /etc/localtime
+
 ```
 
 
