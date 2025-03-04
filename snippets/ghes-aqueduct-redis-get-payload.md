@@ -5,7 +5,8 @@ Fix ghostty terminal:
 
 ```
 H=54.67.78.60
-infocmp -x | ssh -p 122 admin@${H} -- tic -x -
+U=azureuser
+infocmp -x | ssh -p 122 ${U}@${H} -- tic -x -
 ```
 
 
