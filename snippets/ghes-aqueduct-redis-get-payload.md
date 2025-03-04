@@ -59,7 +59,7 @@ System clock synchronized: yes
 ### Effective date in docker container
 
 ```
-for d in $(docker ps | awk '{print $NF}')
+for d in $(docker ps  | tail -n +2 | awk '{print $NF}')
 do
 printf "%s" "$d"
 docker exec -it $d date
