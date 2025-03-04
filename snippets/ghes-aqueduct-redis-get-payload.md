@@ -98,3 +98,8 @@ cat /etc/localtime
 ```
 
 
+```
+sudo chronyc  -A makestep
+```
+
+
