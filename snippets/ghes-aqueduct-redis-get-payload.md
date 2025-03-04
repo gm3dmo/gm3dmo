@@ -2,8 +2,10 @@
 
 Fix ghostty terminal:
 
+
 ```
-infocmp -x | ssh -p 122 admin@54.67.78.60 -- tic -x -
+H=54.67.78.60
+infocmp -x | ssh -p 122 admin@${H} -- tic -x -
 ```
 
 
