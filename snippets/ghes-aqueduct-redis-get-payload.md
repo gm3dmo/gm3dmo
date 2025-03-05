@@ -138,3 +138,10 @@ cat /etc/adjtime
 UTC
 ```
 
+
+```bash
+curl -s \
+    --header 'Content-Type:application/json' \
+    --data '{"app":"github-production","queues":["issue_comment_orchestration"]}' \
+    http://localhost:9096/twirp/aqueduct.api.v1.JobQueueService/Receive
+```
