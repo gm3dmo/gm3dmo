@@ -14,7 +14,7 @@ These are common things asked about when a company has a security incident relat
 ### Deploy Keys
 - [Repository deploy keys are controlled by enterprise and organization policy](https://github.blog/changelog/2024-10-23-repository-deploy-keys-are-controlled-by-enterprise-and-organization-policy-ga/)
 - [Restricting deploy keys in your organization](https://docs.github.com/en/enterprise-cloud@latest/organizations/managing-organization-settings/restricting-deploy-keys-in-your-organization)
-- [Detect deploy keys in organizaiton](https://github.com/gm3dmo/gm3dmo/blob/master/snippets/detecting-deploy-keys.md)
+- [Detect deploy keys in organization](https://github.com/gm3dmo/gm3dmo/blob/master/snippets/detecting-deploy-keys.md)
 
 ### Actions
 
