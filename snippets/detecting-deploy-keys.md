@@ -15,6 +15,8 @@ To detect deploy keys in a repository:
 #export GH_ENTERPRISE_TOKEN=${GITHUB_TOKEN}
 #export GH_HOST=${hostname}
 
+owner="organization_name"
+
 for repo_name in $(gh api -H "Accept: application/vnd.github+json" -H "X-GitHub-Api-Version: 2022-11-28" /orgs/${owner}/repos --jq '.[].full_name' -X GET --paginate)
 do
     gh repo -R ${repo_name} deploy-key list;\
