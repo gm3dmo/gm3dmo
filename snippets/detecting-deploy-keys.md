@@ -9,6 +9,7 @@ To detect deploy keys in a repository:
 
 
 ```shell
+# Optional. Set the GH_TOKEN to an appropriately scoped token:
 GH_TOKEN=ghs_***
 export GH_TOKEN
 ```
