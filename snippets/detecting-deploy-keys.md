@@ -16,7 +16,8 @@ export GH_TOKEN
 
 
 ```shell
-for repo_name in $(gh repo list --json nameWithOwner --jq '.[] .nameWithOwner')
+owner="forest-town"
+for repo_name in $(gh repo list --owner ${owner} --json nameWithOwner --jq '.[] .nameWithOwner')
 do
     gh repo -R ${repo_name} deploy-key list;\
 done
