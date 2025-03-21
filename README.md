@@ -8,8 +8,9 @@
 - 💬 Ask me about: Problem solving, reproducing bugs/errors, GitHub API's.
 - 📫 How to reach me: [![Linkedin Badge](https://img.shields.io/badge/-davidmorris-blue?style=flat&logo=Linkedin&logoColor=white)](https://www.linkedin.com/in/david-morris-3049a5b/)
 
-#### GitHub Audit log Stream
+#### Things I've worked on
 [Audit log stream queries](duckdb-github-audit-log/README.md)
+[Security Incident Checklist](security-incident-checklist.md)
 
 #### Skills
 <img src="https://github.com/devicons/devicon/blob/master/icons/python/python-original-wordmark.svg" title="Python" alt="Python" width="40" height="40"/>&nbsp;
