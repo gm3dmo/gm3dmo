@@ -1,11 +1,11 @@
-## Detecting deploy keys
+## Detecting deploy keys in an Organizatoin
 
 ![tested_by](https://img.shields.io/badge/tested_by-gm3dmo-blue)
 ![tested_on](https://img.shields.io/badge/tested_on-ghec-blue)
 ![tested_date](https://img.shields.io/badge/tested_date-2025--03--21-blue)
 
 
-To detect deploy keys in a repository:
+To detect deploy keys in an organization:
 
 
 ```shell
@@ -23,4 +23,13 @@ do
 done
 
 ```
+
+Output:
+
+
+Duration:
+
+In my test on an organization with approx 1,500 repositories:
+
+
 
