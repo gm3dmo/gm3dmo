@@ -1,4 +1,4 @@
-## Detecting deploy keys in an Organizatoin
+## Detecting deploy keys in an Organization
 
 ![tested_by](https://img.shields.io/badge/tested_by-gm3dmo-blue)
 ![tested_on](https://img.shields.io/badge/tested_on-ghec-blue)
