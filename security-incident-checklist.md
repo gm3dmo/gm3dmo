@@ -23,7 +23,10 @@ GitHub announced fine grained personal access tokens [October 18 2022](https://g
 
 - [Configuring Dependabot security updates](https://docs.github.com/en/enterprise-cloud@latest/code-security/dependabot/dependabot-security-updates/configuring-dependabot-security-updates)
 
-### IP Allow List
+### GitHub IP Addresses
+- [About GitHub's IP Addresses](https://docs.github.com/en/enterprise-cloud@latest/authentication/keeping-your-account-and-data-secure/about-githubs-ip-addresses)
+
+#### IP Allow List and Managing the IP Allow list with GraphQL API
 
 - [Restricting network traffic to your enterprise with an IP allow list](https://docs.github.com/en/enterprise-cloud@latest/admin/configuring-settings/hardening-security-for-your-enterprise/restricting-network-traffic-to-your-enterprise-with-an-ip-allow-list)
 - Organization IP Allow List
