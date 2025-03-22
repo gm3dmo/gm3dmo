@@ -1,4 +1,4 @@
-Revoke all fine grained personal access tokens on an organization
+# Revoke all fine grained personal access tokens on an organization
 
 Example using the [`tiny-list-fine-grained-personal-access-tokens-with-access-to-organization-resources.sh`](https://github.com/gm3dmo/the-power/blob/main/tiny-revoke-all-fine-grained-access-tokens-on-organization.sh)
 
