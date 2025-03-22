@@ -12,9 +12,11 @@ These are common things asked about when a company has a security incident relat
 - [Audit log examples with DuckDB](https://github.com/gm3dmo/gm3dmo/blob/master/duckdb-github-audit-log/README.md)
 
 ### Personal Access Tokens
+
 #### Fine grained personal access tokens
 GitHub announced fine grained personal access tokens [October 18 2022](https://github.blog/security/application-security/introducing-fine-grained-personal-access-tokens-for-github/) and made generally available [March 18 2025](https://github.blog/changelog/2025-03-18-fine-grained-pats-are-now-generally-available/)
 
+- [List fine-grained personal access tokens with access to organization resources](https://github.com/gm3dmo/gm3dmo/blob/master/fine-grained-personal-acces-tokens/report-fine-grained-access-token-usage-across-organization/report-fine-grained-access-token-usage-across-organization.md)
 
 #### Personal access tokens (classic)
 
