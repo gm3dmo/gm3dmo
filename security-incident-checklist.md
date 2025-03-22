@@ -13,9 +13,9 @@ These are common things asked about when a company has a security incident relat
 ### Personal Access Tokens
 #### Fine grained personal access tokens
 GitHub announced fine grained personal access tokens [October 18 2022](https://github.blog/security/application-security/introducing-fine-grained-personal-access-tokens-for-github/) and made generally available [March 18 2025](https://github.blog/changelog/2025-03-18-fine-grained-pats-are-now-generally-available/)
-- [](https://github.blog/changelog/2025-03-18-fine-grained-pats-are-now-generally-available/).
 
-#### Personal access tokens (lassic)
+
+#### Personal access tokens (classic)
 
 
 ### Dependabot
