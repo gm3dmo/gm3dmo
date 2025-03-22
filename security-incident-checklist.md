@@ -10,6 +10,14 @@ These are common things asked about when a company has a security incident relat
 - [Streaming the audit log for your enterprise](https://docs.github.com/en/enterprise-cloud@latest/admin/monitoring-activity-in-your-enterprise/reviewing-audit-logs-for-your-enterprise/streaming-the-audit-log-for-your-enterprise) This is probably the most useful thing you can do. GitHub announced [Enterprise Audit log streaming](https://github.blog/changelog/2022-01-20-audit-log-streaming-is-generally-available/) back in January 2022 so what are you waiting for.
 - [Programmatic audit log configuration and multi-endpoint streaming](https://github.blog/changelog/2024-11-21-programmatic-audit-log-configuration-and-multi-endpoint-streaming/)
 
+### Personal Access Tokens
+#### Fine grained personal access tokens
+GitHub announced fine grained personal access tokens [October 18 2022](https://github.blog/security/application-security/introducing-fine-grained-personal-access-tokens-for-github/) and made generally available [March 18 2025](https://github.blog/changelog/2025-03-18-fine-grained-pats-are-now-generally-available/)
+- [](https://github.blog/changelog/2025-03-18-fine-grained-pats-are-now-generally-available/).
+
+#### Personal access tokens (lassic)
+
+
 ### Dependabot
 
 - [Configuring Dependabot security updates](https://docs.github.com/en/enterprise-cloud@latest/code-security/dependabot/dependabot-security-updates/configuring-dependabot-security-updates)
