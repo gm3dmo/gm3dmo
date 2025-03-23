@@ -20,7 +20,7 @@ These are common things asked about when a company has a security incident relat
 GitHub announced fine grained personal access tokens [October 18 2022](https://github.blog/security/application-security/introducing-fine-grained-personal-access-tokens-for-github/) and made generally available [March 18 2025](https://github.blog/changelog/2025-03-18-fine-grained-pats-are-now-generally-available/)
 
 - [List fine-grained personal access tokens with access to organization resources](https://github.com/gm3dmo/gm3dmo/blob/master/fine-grained-personal-acces-tokens/report-fine-grained-access-token-usage-across-organization/report-fine-grained-access-token-usage-across-organization.md) (script)
-- [Revoke all fine grained personal access tokens on an organization](https://github.com/gm3dmo/gm3dmo/blob/master/fine-grained-personal-acces-tokens/revoke-all-fine-grained-access-tokens-on-organization/revoke-all-fine-grained-access-tokens-on-organization.md)
+- [Revoke all fine grained personal access tokens on an organization](https://github.com/gm3dmo/gm3dmo/blob/master/fine-grained-personal-acces-tokens/revoke-all-fine-grained-access-tokens-on-organization/revoke-all-fine-grained-access-tokens-on-organization.md) (script)
 
 #### Personal access tokens (classic)
 
@@ -39,13 +39,13 @@ GitHub announced fine grained personal access tokens [October 18 2022](https://g
   - [graphql-list-ip-allow-list-entries.sh](https://github.com/gm3dmo/the-power/blob/main/graphql-list-ip-allow-list-entries.sh)
   - [graphql-create-ip-allow-list-entry.sh](https://github.com/gm3dmo/the-power/blob/main/graphql-create-ip-allow-list-entry.sh)
 - Enterprise IP Allow List
-  - [gh-graphql-list-enterprise-ip-allow-list.sh](https://github.com/gm3dmo/the-power/blob/main/gh-graphql-list-enterprise-ip-allow-list.sh)
-  - [graphql-create-enterprise-ip-allow-list-entry.sh](https://github.com/gm3dmo/the-power/blob/main/graphql-create-enterprise-ip-allow-list-entry.sh)
+  - [gh-graphql-list-enterprise-ip-allow-list.sh](https://github.com/gm3dmo/the-power/blob/main/gh-graphql-list-enterprise-ip-allow-list.sh) (script)
+  - [graphql-create-enterprise-ip-allow-list-entry.sh](https://github.com/gm3dmo/the-power/blob/main/graphql-create-enterprise-ip-allow-list-entry.sh) (script)
 
 ### Deploy Keys
 - [Repository deploy keys are controlled by enterprise and organization policy](https://github.blog/changelog/2024-10-23-repository-deploy-keys-are-controlled-by-enterprise-and-organization-policy-ga/)
 - [Restricting deploy keys in your organization](https://docs.github.com/en/enterprise-cloud@latest/organizations/managing-organization-settings/restricting-deploy-keys-in-your-organization)
-- [Detect deploy keys in organization](https://github.com/gm3dmo/gm3dmo/blob/master/snippets/detecting-deploy-keys.md)
+- [Detect deploy keys in organization](https://github.com/gm3dmo/gm3dmo/blob/master/snippets/detecting-deploy-keys.md) (script)
 
 ### Actions
 
