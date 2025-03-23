@@ -55,5 +55,5 @@ GitHub announced fine grained personal access tokens [October 18 2022](https://g
 
 ### GitHub Apps
 
-- [Finding all github apps in an organization](https://github.com/gm3dmo/gm3dmo/blob/master/github-apps/finding-all-github-apps-in-an-organization.md)
+- [Finding all github apps in an organization](https://github.com/gm3dmo/gm3dmo/blob/master/github-apps/finding-all-github-apps-in-an-organization.md) (script)
 
