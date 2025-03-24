@@ -56,5 +56,5 @@ GitHub announced fine grained personal access tokens [October 18 2022](https://g
 ### GitHub Apps
 
 - [Finding all github apps in an organization](https://github.com/gm3dmo/gm3dmo/blob/master/github-apps/finding-all-github-apps-in-an-organization.md) (script)
-- [Suspend a GitHub app installation](https://github.com/gm3dmo/the-power/blob/main/tiny-suspend-app-installation.sh) installation
+- [Suspend a GitHub app installation](https://github.com/gm3dmo/the-power/blob/main/tiny-suspend-app-installation.sh) installation (script)
 - [Unsuspend a GitHub app installation](https://github.com/gm3dmo/the-power/blob/main/tiny-unsuspend-app-installation.sh) (script)
