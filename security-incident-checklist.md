@@ -1,10 +1,11 @@
 # Security Incident Checklist
 These are common things asked about when a company has a security incident related to GitHub.com.
 
-###
+### GitHub
 - [Enabling security features in your organization](https://docs.github.com/en/enterprise-cloud@latest/code-security/securing-your-organization/enabling-security-features-in-your-organization)
 - [Applying the GitHub-recommended security configuration to all repositories in your organization](https://docs.github.com/en/enterprise-cloud@latest/code-security/securing-your-organization/enabling-security-features-in-your-organization/applying-the-github-recommended-security-configuration-in-your-organization#applying-the-github-recommended-security-configuration-to-all-repositories-in-your-organization)
 - [Applying the GitHub-recommended security configuration to specific repositories in your organization](https://docs.github.com/en/enterprise-cloud@latest/code-security/securing-your-organization/enabling-security-features-in-your-organization/applying-the-github-recommended-security-configuration-in-your-organization#applying-the-github-recommended-security-configuration-to-specific-repositories-in-your-organization)
+- [About support for your IdP's Conditional Access Policy](https://docs.github.com/en/enterprise-cloud@latest/admin/managing-iam/configuring-authentication-for-enterprise-managed-users/about-support-for-your-idps-conditional-access-policy)
 
 ### Audit log
 - [Streaming the audit log for your enterprise](https://docs.github.com/en/enterprise-cloud@latest/admin/monitoring-activity-in-your-enterprise/reviewing-audit-logs-for-your-enterprise/streaming-the-audit-log-for-your-enterprise) This is probably the most useful thing you can do. GitHub announced [Enterprise Audit log streaming](https://github.blog/changelog/2022-01-20-audit-log-streaming-is-generally-available/) back in January 2022 so what are you waiting for.
