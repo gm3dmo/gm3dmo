@@ -25,6 +25,7 @@ GitHub announced fine grained personal access tokens [October 18 2022](https://g
 
 #### Personal access tokens (classic)
 
+- [](https://docs.github.com/en/enterprise-cloud@latest/rest/orgs/orgs?apiVersion=2022-11-28#list-saml-sso-authorizations-for-an-organization) (script) Lists all credential authorizations for an organization that uses SAML single sign-on (SSO). The credentials are either personal access tokens or SSH keys that organization members have authorized for the organization. For more information, see [About authentication with SAML single sign-on](https://docs.github.com/enterprise-cloud@latest//articles/about-authentication-with-saml-single-sign-on).
 
 ### Dependabot
 
