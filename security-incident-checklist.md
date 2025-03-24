@@ -53,7 +53,7 @@ GitHub announced fine grained personal access tokens [October 18 2022](https://g
 ### Actions
 
 - [Disabling or limiting GitHub Actions for your organization](https://docs.github.com/en/enterprise-cloud@latest/organizations/managing-organization-settings/disabling-or-limiting-github-actions-for-your-organization)
-- [Get allowed actions for an organization](https://github.com/gm3dmo/the-power/blob/main/get-allowed-actions-for-an-organization.sh (script)
+- [Get allowed actions for an organization](https://github.com/gm3dmo/the-power/blob/main/get-allowed-actions-for-an-organization.sh) (script)
 - [Using third-party actions](https://docs.github.com/en/enterprise-cloud@latest/actions/security-for-github-actions/security-guides/security-hardening-for-github-actions#using-third-party-actions)
 - [Identifying Actions used on a repository](https://github.com/gm3dmo/gm3dmo/blob/master/actions/identifying-actions-used-on-a-repository.md) (script)
 
