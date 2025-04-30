@@ -27,6 +27,7 @@ These are common things asked about when a company has a security incident relat
 
 - [Enforcing policies for personal access tokens in your enterprise](https://docs.github.com/en/enterprise-cloud@latest/admin/enforcing-policies/enforcing-policies-for-your-enterprise/enforcing-policies-for-personal-access-tokens-in-your-enterprise)
 - [Reviewing and revoking personal access tokens in your organization](https://docs.github.com/en/enterprise-cloud@latest/organizations/managing-programmatic-access-to-your-organization/reviewing-and-revoking-personal-access-tokens-in-your-organization)
+- [Revoke a list of credentials](https://docs.github.com/en/enterprise-cloud@latest/rest/credentials/revoke?apiVersion=2022-11-28#revoke-a-list-of-credentials)
 
 #### Fine grained personal access tokens
 - GitHub announced fine grained personal access tokens [October 18 2022](https://github.blog/security/application-security/introducing-fine-grained-personal-access-tokens-for-github/) and made generally available [March 18 2025](https://github.blog/changelog/2025-03-18-fine-grained-pats-are-now-generally-available/)
