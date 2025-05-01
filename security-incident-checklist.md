@@ -1,7 +1,7 @@
 # Security Incident Checklist
 
 ![Author](https://img.shields.io/badge/author-blue)
-![last update](https://img.shields.io/badge/last_update-2025--04--30-blue)
+![last update](https://img.shields.io/badge/last_update-2025--05-01-blue)
 
 These are common things asked about when a company has a security incident related to GitHub.com. They are mostly a collection of links to appropriate GitHub documentation. Some links to examples scripts that excercise the GitHub API's are included.
 
@@ -12,13 +12,24 @@ These are common things asked about when a company has a security incident relat
 - [About support for your IdP's Conditional Access Policy](https://docs.github.com/en/enterprise-cloud@latest/admin/managing-iam/configuring-authentication-for-enterprise-managed-users/about-support-for-your-idps-conditional-access-policy)
 
 ### Audit log
-- [Streaming the audit log for your enterprise](https://docs.github.com/en/enterprise-cloud@latest/admin/monitoring-activity-in-your-enterprise/reviewing-audit-logs-for-your-enterprise/streaming-the-audit-log-for-your-enterprise) This is probably the most useful thing you can do. GitHub announced [Enterprise Audit log streaming](https://github.blog/changelog/2022-01-20-audit-log-streaming-is-generally-available/) back in January 2022 so what are you waiting for. 
+- [Streaming the audit log for your enterprise](https://docs.github.com/en/enterprise-cloud@latest/admin/monitoring-activity-in-your-enterprise/reviewing-audit-logs-for-your-enterprise/streaming-the-audit-log-for-your-enterprise) 
 - For API's to set up and manage the audit log stream [Programmatic audit log configuration and multi-endpoint streaming](https://github.blog/changelog/2024-11-21-programmatic-audit-log-configuration-and-multi-endpoint-streaming/)
 - [Audit log examples with DuckDB](https://github.com/gm3dmo/gm3dmo/blob/master/duckdb-github-audit-log/README.md)
 - [Exporting the audit log](https://docs.github.com/en/enterprise-cloud@latest/organizations/keeping-your-organization-secure/managing-security-settings-for-your-organization/reviewing-the-audit-log-for-your-organization#exporting-the-audit-log)
 - [Use the audit log api to get the last enterprise SSO response for a user](https://github.com/gm3dmo/the-power/blob/main/get-last-enterprise-sso-response-for-a-user.sh) (script)
 - [Identifying audit log events performed by an access token](https://docs.github.com/en/enterprise-cloud@latest/admin/monitoring-activity-in-your-enterprise/reviewing-audit-logs-for-your-enterprise/identifying-audit-log-events-performed-by-an-access-token) 
 - [Script (python) to generate hashed token from PAT](https://github.com/gm3dmo/the-power/blob/main/generate-hashed-token.py)
+
+#### Streaming vs API
+
+Streaming the audit log is probably the most useful security themed thing you can do. GitHub announced [Enterprise Audit log streaming](https://github.blog/changelog/2022-01-20-audit-log-streaming-is-generally-available/) back in January 2022 and some organizations now have all that data in their own logging system. [Multiple audit log streams](https://github.blog/changelog/2024-11-21-programmatic-audit-log-configuration-and-multi-endpoint-streaming/) were announced November 2024.
+
+[Audit log API is rate limited](https://docs.github.com/en/enterprise-cloud@latest/admin/monitoring-activity-in-your-enterprise/reviewing-audit-logs-for-your-enterprise/using-the-audit-log-api-for-your-enterprise#rate-limit). The rate limit was set to 1750 in [this July 2023 announcement](https://github.blog/changelog/2023-07-03-new-rate-limit-is-coming-for-the-audit-log-api-endpoints/). Given that adjustment was significantly lowered it's probably a good idea to keep use of the API to a minimum such as for adhoc querying.
+
+When using the streamed data you should ensure that appropriate teams have access to the data. Some customers stream the data to a source that only a small security team have access to. In that case it is important that team are able to provide timely responses to your queries or grant appropriate access when investigating a security incident.
+
+
+
 
 ### User Accounts
 - [Best practices for securing accounts](https://docs.github.com/en/enterprise-cloud@latest/code-security/supply-chain-security/end-to-end-supply-chain/securing-accounts)
