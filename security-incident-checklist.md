@@ -26,9 +26,7 @@ Streaming the audit log is probably the most useful security themed thing you ca
 
 [Audit log API is rate limited](https://docs.github.com/en/enterprise-cloud@latest/admin/monitoring-activity-in-your-enterprise/reviewing-audit-logs-for-your-enterprise/using-the-audit-log-api-for-your-enterprise#rate-limit). The rate limit was set to 1750 in [this July 2023 announcement](https://github.blog/changelog/2023-07-03-new-rate-limit-is-coming-for-the-audit-log-api-endpoints/). Given that adjustment was significantly lowered it's probably a good idea to keep use of the API to a minimum such as for adhoc querying.
 
-When using the streamed data you should ensure that appropriate teams have access to the data. Some customers stream the data to a source that only a small security team have access to. In that case it is important that team are able to provide timely responses to your queries or grant appropriate access when investigating a security incident.
-
-
+When using the streamed data, ensure that appropriate teams have access to the data. Some customers stream the data to a source that only a small security team have access to. In that case it is important that team are able to provide timely responses to your queries or grant appropriate access when investigating a security incident.
 
 
 ### User Accounts
