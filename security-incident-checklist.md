@@ -21,7 +21,7 @@ These are common things asked about when a company has a security incident relat
 - [Identifying audit log events performed by an access token](https://docs.github.com/en/enterprise-cloud@latest/admin/monitoring-activity-in-your-enterprise/reviewing-audit-logs-for-your-enterprise/identifying-audit-log-events-performed-by-an-access-token) 
 - [Script (python) to generate hashed token from PAT](https://github.com/gm3dmo/the-power/blob/main/generate-hashed-token.py)
 
-#### Streaming vs API
+#### Audit Log Stream vs API
 
 Streaming the audit log is probably the most useful security themed thing you can do. GitHub announced [Enterprise Audit log streaming](https://github.blog/changelog/2022-01-20-audit-log-streaming-is-generally-available/) back in January 2022 and some organizations now have all that data in their own logging system. [Multiple audit log streams](https://github.blog/changelog/2024-11-21-programmatic-audit-log-configuration-and-multi-endpoint-streaming/) were announced November 2024.
 
