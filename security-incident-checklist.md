@@ -14,7 +14,7 @@ These are common things asked about when a company has a security incident relat
 
 ### Audit log
 - [Streaming the audit log for your enterprise](https://docs.github.com/en/enterprise-cloud@latest/admin/monitoring-activity-in-your-enterprise/reviewing-audit-logs-for-your-enterprise/streaming-the-audit-log-for-your-enterprise) 
-- For API's to set up and manage the audit log stream [Programmatic audit log configuration and multi-endpoint streaming](https://github.blog/changelog/2024-11-21-programmatic-audit-log-configuration-and-multi-endpoint-streaming/)
+- [Programmatic audit log configuration and multi-endpoint streaming](https://github.blog/changelog/2024-11-21-programmatic-audit-log-configuration-and-multi-endpoint-streaming/) for API's to set up and manage the audit log stream
 - [Audit log examples with DuckDB](https://github.com/gm3dmo/gm3dmo/blob/master/duckdb-github-audit-log/README.md)
 - [Exporting the audit log](https://docs.github.com/en/enterprise-cloud@latest/organizations/keeping-your-organization-secure/managing-security-settings-for-your-organization/reviewing-the-audit-log-for-your-organization#exporting-the-audit-log)
 - [Use the audit log api to get the last enterprise SSO response for a user](https://github.com/gm3dmo/the-power/blob/main/get-last-enterprise-sso-response-for-a-user.sh) (script)
