@@ -95,3 +95,5 @@ When using the streamed audit log, ensure that appropriate teams have access to 
 ### Abuse
 
 - [Reporting abuse or spam](https://docs.github.com/en/communities/maintaining-your-safety-on-github/reporting-abuse-or-spam)
+- - [Guide to Submitting a DMCA Takedown Notice](https://docs.github.com/en/site-policy/content-removal-policies/guide-to-submitting-a-dmca-takedown-notice)
+
