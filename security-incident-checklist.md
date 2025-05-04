@@ -3,7 +3,7 @@
 ![Author](https://img.shields.io/badge/author-gm3dmo-blue)
 ![last update](https://img.shields.io/badge/last_update-2025--05--04-blue)
 
-These are common things asked about when a company has a security incident related to GitHub.com. They are mostly a collection of links to appropriate GitHub documentation. Some links to examples scripts that excercise the GitHub API's are included.
+These are common things asked about when a company has a security incident related to GitHub.com. They are mostly a collection of links to appropriate GitHub documentation. Some links to examples scripts that demonstrate the GitHub API's are included.
 
 ### GitHub
 - [Enabling security features in your organization](https://docs.github.com/en/enterprise-cloud@latest/code-security/securing-your-organization/enabling-security-features-in-your-organization)
