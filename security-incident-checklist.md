@@ -89,7 +89,7 @@ When using the streamed audit log, ensure that appropriate teams have access to 
 ### GitHub Apps
 - [Managing private keys for GitHub Apps](https://docs.github.com/en/enterprise-cloud@latest/apps/creating-github-apps/authenticating-with-a-github-app/managing-private-keys-for-github-apps)
 - [Finding all github apps in an organization](https://github.com/gm3dmo/gm3dmo/blob/master/github-apps/finding-all-github-apps-in-an-organization.md) (script)
-- [Suspend a GitHub app installation](https://github.com/gm3dmo/the-power/blob/main/tiny-suspend-app-installation.sh) installation (script)
+- [Suspend a GitHub app installation](https://github.com/gm3dmo/the-power/blob/main/tiny-suspend-app-installation.sh) (script)
 - [Unsuspend a GitHub app installation](https://github.com/gm3dmo/the-power/blob/main/tiny-unsuspend-app-installation.sh) (script)
 
 ### Removal of Information from GitHub
