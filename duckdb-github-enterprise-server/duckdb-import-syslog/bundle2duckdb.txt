@@ -97,3 +97,4 @@ pypy3 klp.py --stats github-logs/resqued.log.1 -k ${resqued_keys} --output-forma
 ./duckdb ${duckdb_database} < syslog-to-csv/duckdb/resqued.ddl
 
 
+
