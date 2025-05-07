@@ -20,6 +20,7 @@ These are common things asked about when a company has a security incident relat
 - [Use the audit log api to get the last enterprise SSO response for a user](https://github.com/gm3dmo/the-power/blob/main/get-last-enterprise-sso-response-for-a-user.sh) (script)
 - [Identifying audit log events performed by an access token](https://docs.github.com/en/enterprise-cloud@latest/admin/monitoring-activity-in-your-enterprise/reviewing-audit-logs-for-your-enterprise/identifying-audit-log-events-performed-by-an-access-token) 
 - [Script (python) to generate hashed token from PAT](https://github.com/gm3dmo/the-power/blob/main/generate-hashed-token.py)
+- [Access, capture, and consume your audit logs by Jessi Moths // Director, Field Services, Enterprise Products // GitHub](https://resources.github.com/learn/pathways/administration-governance/essentials/access-capture-consume-audit-logs/)
 
 #### Audit Log Stream vs API
 
