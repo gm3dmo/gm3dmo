@@ -1,7 +1,7 @@
 # Security Incident Checklist
 
 ![Author](https://img.shields.io/badge/author-gm3dmo-blue)
-![last update](https://img.shields.io/badge/last_update-2025--05--07-blue)
+![last update](https://img.shields.io/badge/last_update-2025--05--08-blue)
 
 These are common things asked about when a company has a security incident related to GitHub.com. They are mostly a collection of links to appropriate GitHub documentation. Some links to examples scripts that demonstrate the GitHub API's are included.
 
@@ -86,6 +86,7 @@ When using the streamed audit log, ensure that appropriate teams have access to 
 - [Get allowed actions for an organization](https://github.com/gm3dmo/the-power/blob/main/get-allowed-actions-for-an-organization.sh) (script) ([api](https://docs.github.com/en/rest/reference/actions#get-allowed-actions-for-an-organization))
 - [Using third-party actions](https://docs.github.com/en/enterprise-cloud@latest/actions/security-for-github-actions/security-guides/security-hardening-for-github-actions#using-third-party-actions)
 - [Identifying Actions used on a repository](https://github.com/gm3dmo/gm3dmo/blob/master/actions/identifying-actions-used-on-a-repository.md) (script)
+- [How to Harden GitHub Actions: The Unofficial Guide](https://www.wiz.io/blog/github-actions-security-guide) (wiz.io)
 
 ### GitHub Apps
 - [Managing private keys for GitHub Apps](https://docs.github.com/en/enterprise-cloud@latest/apps/creating-github-apps/authenticating-with-a-github-app/managing-private-keys-for-github-apps)
