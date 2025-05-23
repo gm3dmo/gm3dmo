@@ -1,7 +1,7 @@
 # Security Incident Checklist
 
 ![Author](https://img.shields.io/badge/author-gm3dmo-blue)
-![last update](https://img.shields.io/badge/last_update-2025--05--08-blue)
+![last update](https://img.shields.io/badge/last_update-2025--05--23-blue)
 
 These are common things asked about when a company has a security incident related to GitHub.com. They are mostly a collection of links to appropriate GitHub documentation. Some links to examples scripts that demonstrate the GitHub API's are included.
 
@@ -31,6 +31,11 @@ Streaming the audit log is probably the most useful security themed thing you ca
 
 When using the streamed audit log, ensure that appropriate teams have access to the data. Some customers stream the data to a source that only a small security team have access to. In that case it is important that team are able to provide timely responses to your queries or grant appropriate access when investigating a security incident to prevent that team becoming a bottleneck in your investigations.
 
+#### Audit Log Stream and IP Disclosure
+Ensure your audit log stream is enabled for IP Disclosure if they are required for your security investigations.
+
+#### Audit Log Stream and API Request Events
+Ensure your audit log stream is enabled for API Requests if they are required for your security investigations.
 
 ### User Accounts
 - [Best practices for securing accounts](https://docs.github.com/en/enterprise-cloud@latest/code-security/supply-chain-security/end-to-end-supply-chain/securing-accounts)
