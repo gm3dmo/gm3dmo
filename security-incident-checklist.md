@@ -101,7 +101,10 @@ Ensure your audit log stream is enabled for API Requests if they are required fo
 - [Unsuspend a GitHub app installation](https://github.com/gm3dmo/the-power/blob/main/tiny-unsuspend-app-installation.sh) (script)
 
 #### GitHub Apps Audit log action categories
-The audit log categories for GitHub Apps: [integration](https://docs.github.com/en/organizations/keeping-your-organization-secure/managing-security-settings-for-your-organization/audit-log-events-for-your-organization#integration), [integration_installation](https://docs.github.com/en/organizations/keeping-your-organization-secure/managing-security-settings-for-your-organization/audit-log-events-for-your-organization#integration_installation), [integration_installation_request](https://docs.github.com/en/organizations/keeping-your-organization-secure/managing-security-settings-for-your-organization/audit-log-events-for-your-organization#integration_installation_request)
+The audit log categories for GitHub Apps: 
+- [integration](https://docs.github.com/en/organizations/keeping-your-organization-secure/managing-security-settings-for-your-organization/audit-log-events-for-your-organization#integration)
+- [integration_installation](https://docs.github.com/en/organizations/keeping-your-organization-secure/managing-security-settings-for-your-organization/audit-log-events-for-your-organization#integration_installation)
+- [integration_installation_request](https://docs.github.com/en/organizations/keeping-your-organization-secure/managing-security-settings-for-your-organization/audit-log-events-for-your-organization#integration_installation_request)
 
 ### Restricting Access
 - [Restricting access to GitHub.com using a corporate proxy (Enterprise Managed Users)](https://docs.github.com/en/enterprise-cloud@latest/admin/configuring-settings/hardening-security-for-your-enterprise/restricting-access-to-githubcom-using-a-corporate-proxy)
