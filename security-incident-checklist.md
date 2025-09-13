@@ -117,3 +117,6 @@ The audit log categories for GitHub Apps:
 ### Abuse
 - [Reporting abuse or spam](https://docs.github.com/en/communities/maintaining-your-safety-on-github/reporting-abuse-or-spam)
 
+### Other tools of interest for security teams
+- [Enterprise security management teams - scripts created by Field Security Specialists working at GitHub](https://github.com/advanced-security/enterprise-security-team)
+- 
