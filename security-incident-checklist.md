@@ -62,6 +62,7 @@ Ensure your audit log stream is enabled for API Requests if they are required fo
 ### Dependabot
 
 - [Configuring Dependabot security updates](https://docs.github.com/en/enterprise-cloud@latest/code-security/dependabot/dependabot-security-updates/configuring-dependabot-security-updates)
+- [Dependabot support configuration of a minimum package age](https://github.blog/changelog/2025-07-01-dependabot-supports-configuration-of-a-minimum-package-age/)
 
 ### GitHub IP Addresses
 - [About GitHub's IP Addresses](https://docs.github.com/en/enterprise-cloud@latest/authentication/keeping-your-account-and-data-secure/about-githubs-ip-addresses)
