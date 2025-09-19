@@ -108,6 +108,9 @@ The audit log categories for GitHub Apps:
 - [integration_installation](https://docs.github.com/en/organizations/keeping-your-organization-secure/managing-security-settings-for-your-organization/audit-log-events-for-your-organization#integration_installation)
 - [integration_installation_request](https://docs.github.com/en/organizations/keeping-your-organization-secure/managing-security-settings-for-your-organization/audit-log-events-for-your-organization#integration_installation_request)
 
+### Secure Coding
+- [Secure Coding](https://docs.github.com/en/enterprise-cloud@latest/code-security)
+
 ### Restricting Access
 - [Restricting access to GitHub.com using a corporate proxy (Enterprise Managed Users)](https://docs.github.com/en/enterprise-cloud@latest/admin/configuring-settings/hardening-security-for-your-enterprise/restricting-access-to-githubcom-using-a-corporate-proxy)
 
