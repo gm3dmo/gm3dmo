@@ -101,6 +101,7 @@ Ensure your audit log stream is enabled for API Requests if they are required fo
 - [Finding all github apps in an organization](https://github.com/gm3dmo/gm3dmo/blob/master/github-apps/finding-all-github-apps-in-an-organization.md) (script)
 - [Suspend a GitHub app installation](https://github.com/gm3dmo/the-power/blob/main/tiny-suspend-app-installation.sh) (script)
 - [Unsuspend a GitHub app installation](https://github.com/gm3dmo/the-power/blob/main/tiny-unsuspend-app-installation.sh) (script)
+- [Block repository administrators from installing GitHub Apps on their own now in public preview](https://github.blog/changelog/2025-11-17-block-repository-administrators-from-installing-github-apps-on-their-own-now-in-public-preview/)
 
 #### GitHub Apps Audit log action categories
 The audit log categories for GitHub Apps: 
