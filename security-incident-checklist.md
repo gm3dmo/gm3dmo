@@ -49,7 +49,7 @@ Ensure your audit log stream is enabled for API Requests if they are required fo
 
 #### Fine grained personal access tokens
 - GitHub announced fine grained personal access tokens [October 18 2022](https://github.blog/security/application-security/introducing-fine-grained-personal-access-tokens-for-github/) and made generally available [March 18 2025](https://github.blog/changelog/2025-03-18-fine-grained-pats-are-now-generally-available/)
-- [Setting a personal access token policy for your organization]Setting a personal access token policy for your organization(https://docs.github.com/en/organizations/managing-programmatic-access-to-your-organization/setting-a-personal-access-token-policy-for-your-organization)
+- [Setting a personal access token policy for your organization](https://docs.github.com/en/organizations/managing-programmatic-access-to-your-organization/setting-a-personal-access-token-policy-for-your-organization)
 
 - [List fine-grained personal access tokens with access to organization resources](https://github.com/gm3dmo/gm3dmo/blob/master/fine-grained-personal-acces-tokens/report-fine-grained-access-token-usage-across-organization/report-fine-grained-access-token-usage-across-organization.md) (script)
 - [Revoke all fine grained personal access tokens on an organization](https://github.com/gm3dmo/gm3dmo/blob/master/fine-grained-personal-acces-tokens/revoke-all-fine-grained-access-tokens-on-organization/revoke-all-fine-grained-access-tokens-on-organization.md) (script)
