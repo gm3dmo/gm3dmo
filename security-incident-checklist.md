@@ -1,7 +1,7 @@
 # Security Incident Checklist
 
 ![Author](https://img.shields.io/badge/author-gm3dmo-blue)
-![last update](https://img.shields.io/badge/last_update-2025--06--02-blue)
+![last update](https://img.shields.io/badge/last_update-2025--12--30-blue)
 
 These are common things asked about when a company has a security incident related to GitHub.com. They are mostly a collection of links to appropriate GitHub documentation. Some links to examples scripts that demonstrate the GitHub API's are included. Teams who are actively managing a security incident will get some use from this but it's really best to check what's in place in the organization before things fall apart.
 
@@ -103,6 +103,7 @@ Ensure your audit log stream is enabled for API Requests if they are required fo
 - [Suspend a GitHub app installation](https://github.com/gm3dmo/the-power/blob/main/tiny-suspend-app-installation.sh) (script)
 - [Unsuspend a GitHub app installation](https://github.com/gm3dmo/the-power/blob/main/tiny-unsuspend-app-installation.sh) (script)
 - [Block repository administrators from installing GitHub Apps on their own now in public preview](https://github.blog/changelog/2025-11-17-block-repository-administrators-from-installing-github-apps-on-their-own-now-in-public-preview/)
+- [Control who can request apps for your organization now in public preview](https://github.blog/changelog/2025-12-22-control-who-can-request-apps-for-your-organization/)
 
 #### GitHub Apps Audit log action categories
 The audit log categories for GitHub Apps: 
