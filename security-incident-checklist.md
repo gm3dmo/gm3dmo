@@ -1,7 +1,7 @@
 # Security Incident Checklist
 
 ![Author](https://img.shields.io/badge/author-gm3dmo-blue)
-![last update](https://img.shields.io/badge/last_update-2025--12--30-blue)
+![last update](https://img.shields.io/badge/last_update-2026--01--30-blue)
 
 These are common things asked about when a company has a security incident related to GitHub.com. They are mostly a collection of links to appropriate GitHub documentation. Some links to examples scripts that demonstrate the GitHub API's are included. Teams who are actively managing a security incident will get some use from this but it's really best to check what's in place in the organization before things fall apart.
 
