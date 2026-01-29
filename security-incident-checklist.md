@@ -127,3 +127,4 @@ The audit log categories for GitHub Apps:
 ### Other tools of interest for security teams
 - [Enterprise security management teams - scripts created by Field Security Specialists working at GitHub](https://github.com/advanced-security/enterprise-security-team)
 - [Breaking up with GitHub Personal Access Tokens](https://some-natalie.dev/blog/intro-octosts/)
+- [GitHub Well Architected Framework](https://wellarchitected.github.com/)
