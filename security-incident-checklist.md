@@ -1,7 +1,7 @@
 # Security Incident Checklist
 
 ![Author](https://img.shields.io/badge/author-gm3dmo-blue)
-![last update](https://img.shields.io/badge/last_update-2026--01--30-blue)
+![last update](https://img.shields.io/badge/last_update-2026--04--26-blue)
 
 These are common things asked about when a company has a security incident related to GitHub.com. They are mostly a collection of links to appropriate GitHub documentation. Some links to examples scripts that demonstrate the GitHub API's are included. Teams who are actively managing a security incident will get some use from this but it's really best to check what's in place in the organization before things fall apart.
 
@@ -43,6 +43,9 @@ Ensure your audit log stream is enabled for API Requests if they are required fo
 
 ### Personal Access Tokens
 
+- [GitHub credential types reference](https://docs.github.com/en/enterprise-cloud@latest/organizations/managing-programmatic-access-to-your-organization/github-credential-types)
+- [Revoking SSO authorization](https://docs.github.com/en/enterprise-cloud@latest/organizations/managing-programmatic-access-to-your-organization/github-credential-types#revoking-sso-authorization)
+- [Bulk actions for security incidents](https://docs.github.com/en/enterprise-cloud@latest/organizations/managing-programmatic-access-to-your-organization/github-credential-types#bulk-actions-for-security-incidents)
 - [Enforcing policies for personal access tokens in your enterprise](https://docs.github.com/en/enterprise-cloud@latest/admin/enforcing-policies/enforcing-policies-for-your-enterprise/enforcing-policies-for-personal-access-tokens-in-your-enterprise)
 - [Reviewing and revoking personal access tokens in your organization](https://docs.github.com/en/enterprise-cloud@latest/organizations/managing-programmatic-access-to-your-organization/reviewing-and-revoking-personal-access-tokens-in-your-organization)
 - [Revoke a list of credentials](https://docs.github.com/en/enterprise-cloud@latest/rest/credentials/revoke?apiVersion=2022-11-28#revoke-a-list-of-credentials) ([revoke-a-list-of-credentials.sh](https://github.com/gm3dmo/the-power/blob/main/revoke-a-list-of-credentials.sh))
