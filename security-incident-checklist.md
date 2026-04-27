@@ -1,7 +1,7 @@
 # Security Incident Checklist
 
 ![Author](https://img.shields.io/badge/author-gm3dmo-blue)
-![last update](https://img.shields.io/badge/last_update-2026--04--26-blue)
+![last update](https://img.shields.io/badge/last_update-2026--04--27-blue)
 
 These are common things asked about when a company has a security incident related to GitHub.com. They are mostly a collection of links to appropriate GitHub documentation. Some links to examples scripts that demonstrate the GitHub API's are included. Teams who are actively managing a security incident will get some use from this but it's really best to check what's in place in the organization before things fall apart.
 
@@ -72,7 +72,6 @@ Ensure your audit log stream is enabled for API Requests if they are required fo
 - [About GitHub's IP Addresses](https://docs.github.com/en/enterprise-cloud@latest/authentication/keeping-your-account-and-data-secure/about-githubs-ip-addresses)
 
 #### IP Allow List and Managing the IP Allow list with GraphQL API
-
 - [Restricting network traffic to your enterprise with an IP allow list](https://docs.github.com/en/enterprise-cloud@latest/admin/configuring-settings/hardening-security-for-your-enterprise/restricting-network-traffic-to-your-enterprise-with-an-ip-allow-list)
 - Organization IP Allow List
   - [graphql-list-ip-allow-list-entries.sh](https://github.com/gm3dmo/the-power/blob/main/graphql-list-ip-allow-list-entries.sh) (script)
@@ -82,7 +81,6 @@ Ensure your audit log stream is enabled for API Requests if they are required fo
   - [graphql-create-enterprise-ip-allow-list-entry.sh](https://github.com/gm3dmo/the-power/blob/main/graphql-create-enterprise-ip-allow-list-entry.sh) (script)
 
 ### Repositories
-
 - [Restricting repository visibility changes in your organization](https://docs.github.com/en/organizations/managing-organization-settings/restricting-repository-visibility-changes-in-your-organization)
 
 ####  Deploy Keys
@@ -93,7 +91,6 @@ Ensure your audit log stream is enabled for API Requests if they are required fo
 - [Delete a deploy key](https://github.com/gm3dmo/the-power/blob/main/delete-a-deploy-key.sh) (script)
 
 ### Actions
-
 - [Disabling or limiting GitHub Actions for your organization](https://docs.github.com/en/enterprise-cloud@latest/organizations/managing-organization-settings/disabling-or-limiting-github-actions-for-your-organization)
 - [Get allowed actions for an organization](https://github.com/gm3dmo/the-power/blob/main/get-allowed-actions-for-an-organization.sh) (script) ([api](https://docs.github.com/en/rest/reference/actions#get-allowed-actions-for-an-organization))
 - [Using third-party actions](https://docs.github.com/en/enterprise-cloud@latest/actions/security-for-github-actions/security-guides/security-hardening-for-github-actions#using-third-party-actions)
@@ -113,6 +110,9 @@ The audit log categories for GitHub Apps:
 - [integration](https://docs.github.com/en/organizations/keeping-your-organization-secure/managing-security-settings-for-your-organization/audit-log-events-for-your-organization#integration)
 - [integration_installation](https://docs.github.com/en/organizations/keeping-your-organization-secure/managing-security-settings-for-your-organization/audit-log-events-for-your-organization#integration_installation)
 - [integration_installation_request](https://docs.github.com/en/organizations/keeping-your-organization-secure/managing-security-settings-for-your-organization/audit-log-events-for-your-organization#integration_installation_request)
+
+### Code Security
+- [Code Security Configurations REST API](https://docs.github.com/en/rest/code-security?apiVersion=2026-03-10)
 
 ### Secure Coding
 - [Secure Coding](https://docs.github.com/en/enterprise-cloud@latest/code-security)
